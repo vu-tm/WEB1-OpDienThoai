@@ -18,45 +18,45 @@
 <p align="center">
   <b> Đăng nhập để sử dụng </b>
 <br>
-  <img width="344" height="340" alt="Image" src="https://github.com/user-attachments/assets/253fe6ec-2af2-4578-9caf-7ffb3b618272"/>
+  <img src="https://github.com/user-attachments/assets/253fe6ec-2af2-4578-9caf-7ffb3b618272" style="max-width:100%;"/>
 </p>
 <br>
 
 <p align="center">
   <b> Bộ lọc </b>
 <br>
-  <img width="951" height="663" alt="Image" src="https://github.com/user-attachments/assets/869dc546-3dbb-42a6-9238-9c3693f43794"/>
+  <img src="https://github.com/user-attachments/assets/869dc546-3dbb-42a6-9238-9c3693f43794" style="max-width:100%;"/>
 </p>
 <br>
 
 <p align="center">
   <b> Sản phẩm </b>
   <br>
-  <img width="837" alt="Image" src="https://github.com/user-attachments/assets/9294f69a-dd1d-4d10-af73-7390335f801e" />
+  <img src="https://github.com/user-attachments/assets/9294f69a-dd1d-4d10-af73-7390335f801e" style="max-width:100%;"/>
   <br>
   <br>
-  <img width="640" height="501" alt="Image" src="https://github.com/user-attachments/assets/565ca99f-7cf0-494b-8437-fbc4b0019c1d"" />
+  <img src="https://github.com/user-attachments/assets/565ca99f-7cf0-494b-8437-fbc4b0019c1d" style="max-width:100%;" />
 </p>
 <br>
 
 <p align="center">
   <b> Giỏ hàng </b>
-  <img width="1515" height="596" alt="Image" src="https://github.com/user-attachments/assets/134e148f-5d19-4507-954c-e1914fd1b0e9" />
+  <img src="https://github.com/user-attachments/assets/134e148f-5d19-4507-954c-e1914fd1b0e9" style="max-width:100%;"/>
 </p>
 <br>
 
 <p align="center">
   <b> Thanh toán </b>
-  <img width="1518" height="602" alt="Image" src="https://github.com/user-attachments/assets/6825e432-d249-4769-9648-65e1207a47f0" />
+  <img src="https://github.com/user-attachments/assets/6825e432-d249-4769-9648-65e1207a47f0" style="max-width:100%;" />
 </p>
 <br>
 
 <p align="center">
   <b> Trang admin </b>
-  <img width="1470" height="603" alt="Image" src="https://github.com/user-attachments/assets/467d79bb-ef32-4bc6-b15f-de8dc5df9e46"/>
+  <img src="https://github.com/user-attachments/assets/467d79bb-ef32-4bc6-b15f-de8dc5df9e46" style="max-width:100%;"/>
   <br>
   <br>
-  <img width="1490" height="603" alt="Image" src="https://github.com/user-attachments/assets/8c12a0fd-cb3f-4866-80c6-605af0921289"/>
+  <img src="https://github.com/user-attachments/assets/8c12a0fd-cb3f-4866-80c6-605af0921289" style="max-width:100%;"/>
 </p>
 <br>
 
