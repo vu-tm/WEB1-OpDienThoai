@@ -1,0 +1,677 @@
+
+
+:root {
+    --gray: rgba(128, 128, 128, 0.8); /* Định nghĩa màu xám */
+    --white: rgba(255, 255, 255, 0.8); /* Định nghĩa màu trắng */}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea; /* Nền trang sáng hơn */
+
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Giữ border-collapse để bảng trông gọn gàng */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #eaeaea; /* Thêm đường viền cho tất cả các cạnh của từng ô */
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+.move{
+    width: 18%;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 7px;
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+    cursor: pointer;
+    color: white;
+}
+.move:hover{
+    background-color: rgba(17, 0, 0, 0.9); /* Đổi màu khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nổi khi hover */
+
+}
+#addProductSection .line{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin-top: 10px;
+}
+button {
+    border-radius: 10px;
+    
+    border: 1px solid #636161;
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-left: 30px;
+    transition: transform 80ms ease-in;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button.ghost {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+
+  
+
+  .icon-button {
+    display: inline-block;
+    border-radius: 3px; /* Bo góc nhỏ hơn */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Đảm bảo không có khoảng cách bên ngoài */
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+    cursor: pointer;
+}
+
+.icon {
+    border: solid 1px black; 
+    padding: 5px; /* Giữ nguyên padding để làm icon nổi bật hơn */
+    border-radius: 5px; /* Bo tròn icon */
+    font-size: 13px; /* Kích thước font icon */
+    color: white;
+}
+
+.trash-icon:hover {
+    color: #ff4d4d; /* Màu đỏ khi hover nút xóa */
+}
+
+.edit-icon:hover {
+    color: #4caf50; /* Màu xanh khi hover nút chỉnh sửa */
+}
+
+
+.icon_sanpham {
+    border: solid 1px black;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(73, 72, 72, 0.8);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.icon_sanpham:hover {
+    background-color: rgba(17, 0, 0, 0.9); /* Đổi màu khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nổi khi hover */
+}
+
+.icon_sanpham i {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+
+
+.title_product{
+    height: 60px ;
+    padding-top: 10px;
+    border-left: solid #555454 7px;
+    font-size: 28px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+        
+    
+}
+.content_sanpham{
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.search-container_sanpham {
+    border: 2px solid #ccc; /* Đường viền ngoài */
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    
+}
+.search-label_sanpham {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Tùy chỉnh ô nhập */
+.search-input_sanpham {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2; /* Màu xám nhẹ */
+}
+.hidden {
+    display: none; }
+
+#addProductSection .title_product{
+    border-left: solid rgb(61, 61, 61) 7px;
+    font-size: 20px;
+    background-color: #ffff;
+    border-radius: 7px;
+    padding: 5px;
+    
+}
+#addProductSection .content{
+    margin-top: 15px;
+    background-color: #ffff;
+    width: 98%;
+    border-radius: 7px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+#addProductSection  .add-product {
+    height:40px ;
+    font-size: 24px;                /* Kích thước chữ lớn hơn */
+    font-weight: bold;              /* Chữ đậm */               /* Màu xanh lá */
+    font-family: 'Arial', sans-serif; /* Phông chữ đẹp và dễ đọc */
+}
+#addProductSection  .yellow-line {
+    border: none;               /* Loại bỏ đường viền mặc định */
+    height: 2px;                /* Độ dày của đường ngang */
+    background-color: rgb(99, 99, 98);   /* Màu vàng cho đường */                 /* Độ dài đường (tùy chỉnh theo ý muốn) */          /* Căn giữa và thêm khoảng cách trên/dưới */
+    width: 100%;
+}
+#addProductSection table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#addProductSection th,td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+#addProductSection textarea {
+    width: 100%;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    height: 100px; /* Đặt chiều cao cho textarea */
+    padding: 10px; /* Thêm khoảng cách giữa nội dung và viền */
+    margin-top: 5px;
+    border: solid 1px #eaeaea; 
+    resize: vertical; /* Cho phép người dùng thay đổi chiều cao của textarea */
+}
+#addProductSection th{
+    background-color: #f1f1f1;
+}
+#addProductSection tr:hover{
+    background-color: #f9f9f9;
+}
+#addProductSection td:last-child, th:last-child{
+    border-right: none;
+}
+#addProductSection .status{
+    margin-top: 15px;
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #ffffff   ;
+    font-size: 25px;                  /* Kích thước chữ lớn hơn */
+    font-weight: bold;              /* Chữ đậm */               /* Màu xanh lá */
+    font-family: 'Arial', sans-serif;
+    color: black;
+}
+#addProductSection .line{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin-top: 10px;
+}
+#addProductSection .add-product1{
+    display: flex;
+    width: 100%;
+    
+}
+#addProductSection .item-product{
+    border: solid 3px yellow;
+    width: 22%;
+
+}
+#addProductSection .add{
+    width: 100%;
+    height: 20%;
+}
+#addProductSection .square{
+    border: solid black 1px;
+    width: 100%;
+}
+#addProductSection .left{
+    width: 48%;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+#addProductSection .box{
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    width: 29%;
+    margin-right: 15px;
+    
+}
+#addProductSection .add-product2 {
+    font-size: 15px;                /* Kích thước chữ lớn hơn */
+    font-weight: bold;              /* Chữ đậm */               /* Màu xanh lá */
+    font-family: 'Arial', sans-serif; /* Phông chữ đẹp và dễ đọc */
+    padding-top: 5px;   
+    padding-left: 7px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#addProductSection .box1{
+    display: inline-block;
+    border-radius: 5px;
+    width: 100%;
+    height: 40%;
+    background-color: #eaeaea;
+    margin-top: 5px;
+}
+#addProductSection input{
+    width:100%;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    height:30px;
+    margin-top: 5px;
+    border: solid 1px #eaeaea; 
+}
+#addProductSection select{
+    width: 100%;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    height:35px;
+    margin-top: 5px;
+    border: solid 1px #eaeaea; 
+}
+
+#addProductSection .right{
+    width: 48%;
+    margin-left: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+#addProductSection .icon{
+    margin-left: 10px;
+    padding: 7px;
+    width: 13%;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    margin-top: 10px;
+}
+#addProductSection .add-product3 {
+    font-size: 15px;                /* Kích thước chữ lớn hơn */
+    font-weight: bold;              /* Chữ đậm */               /* Màu xanh lá */
+    font-family: 'Arial', sans-serif; /* Phông chữ đẹp và dễ đọc */
+    padding-top: 1px;
+    padding-left: 7px;
+    padding-top: 20px;
+   
+}
+
+
+#addProductSection .mota{
+    border: solid 1px #ccc;
+    border-radius: 7px;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    
+}
+
+#addProductSection .luuhuy {
+    margin-top: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#addProductSection .luu {
+    width: 10%;  /* Thử tăng kích thước nút */
+    border-radius: 7px;
+    text-align: center;
+    background-color: #111212;
+    padding-top: 8px;
+    height: 30px;
+    font-size: 14px;  /* Tăng kích thước chữ */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;  /* Hiệu ứng hover */
+}
+
+#addProductSection .luu:hover {
+    background-color: #005df0;  /* Màu nền khi hover */
+}
+
+#addProductSection .huy {
+    border: solid 1px #005df0;
+    width: 10%;  /* Thử tăng kích thước nút */
+    height: 30px;
+    border-radius: 7px;
+    text-align: center;
+    background-color: white;
+    font-size: 14px;  /* Tăng kích thước chữ */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    padding-top: 8px;
+    color: #005df0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* Hiệu ứng hover */
+}
+
+#addProductSection .huy:hover {
+    background-color: #005df0;  /* Màu nền khi hover */
+    color: white;  /* Đổi màu chữ khi hover */
+}
+
+
+    /* Định dạng hộp xác nhận xóa */
+#deleteConfirmBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    height: 130px;
+    z-index: 1000;
+    
+}
+#deleteConfirmBox button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+}
+
+/* Định dạng hộp chỉnh sửa sản phẩm */
+/* Hộp thoại chỉnh sửa sản phẩm */
+#editProductBox {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 550px;
+    z-index: 1000;
+    text-align: left;
+}
+
+/* Tiêu đề hộp thoại */
+#editProductBox h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Các ô nhập liệu và chọn */
+#editProductBox label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#editProductBox input[type="text"],
+#editProductBox select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Xem trước ảnh sản phẩm */
+#editImagePreviewContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#editImagePreview {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    display: none; /* Mặc định ẩn */
+}
+
+#deleteEditImageButton {
+    display: none; /* Mặc định ẩn */
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Nhóm nút Lưu và Hủy */
+/* Hộp thoại chỉnh sửa sản phẩm */
+#editProductBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Giảm chiều rộng */
+    z-index: 1000;
+    text-align: left;
+}
+
+/* Tiêu đề hộp thoại */
+#editProductBox h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+/* Các ô nhập liệu và chọn */
+#editProductBox label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: #555;
+}
+
+#editProductBox input[type="text"],
+#editProductBox select {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Xem trước ảnh sản phẩm */
+#editImagePreviewContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#editImagePreview {
+    width: 80px; /* Thu nhỏ kích thước xem trước ảnh */
+    height: auto;
+    margin-right: 8px;
+    display: none; /* Mặc định ẩn */
+}
+
+#deleteEditImageButton {
+    display: none; /* Mặc định ẩn */
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Nhóm nút Lưu và Hủy */
+/* Hộp thoại chỉnh sửa sản phẩm */
+#editProductBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px 15px; /* Giảm padding */
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+    width: 400px; /* Giảm chiều rộng */
+    height: 600px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Cuộn nếu nội dung vượt quá */
+    z-index: 1000;
+    text-align: left;
+}
+
+/* Tiêu đề hộp thoại */
+#editProductBox h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px; /* Giảm kích thước phông chữ */
+    color: #333;
+    height: 30px;
+}
+
+/* Các ô nhập liệu và chọn */
+#editProductBox label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 13px; /* Giảm kích thước phông chữ */
+    color: #555;
+    
+}
+
+#editProductBox input[type="text"],
+#editProductBox select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Xem trước ảnh sản phẩm */
+#editImagePreviewContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#editImagePreview {
+    width: 70px; /* Giảm kích thước xem trước ảnh */
+    height: auto;
+    margin-right: 6px;
+    display: none; /* Mặc định ẩn */
+}
+
+#deleteEditImageButton {
+    display: none; /* Mặc định ẩn */
+    color: white;
+    border: none;
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Nhóm nút Lưu và Hủy */
+#editProductBox button {
+    padding: 6px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 45%;
+}
+
+#editProductBox button:first-of-type {
+    background-color: #4CAF50; /* Nút Lưu */
+    color: white;
+    margin-right: 5%;
+}
+
+#editProductBox button:last-of-type {
+    background-color: #f44336; /* Nút Hủy */
+    color: white;
+}
+#editProductBox button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+}
+@media screen and (max-width: 768px) {
+    .title_product{
+        height: 80px;
+    }
+   
+}

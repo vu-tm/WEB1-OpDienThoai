@@ -1,0 +1,494 @@
+ let users = JSON.parse(localStorage.getItem('users')) || [];
+let newUsersList = [
+    {
+        "id": 1,
+        "email": "thang@gmail.com",
+        "password": "thang",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 3",
+            "ward": "Phường 1",
+            "street": "312"
+        },
+        "spending": 185000,
+        "numberphone": "0377824412",
+        "status": "unlocked",
+        "name": "Quang Thắng",
+        "cart": [
+            {
+                "id": 6,
+                img: "./img/product/Case/iphone_anime (15).png",
+                name: "Ốp Lưng Wanted One Piece",
+                price: 185000,
+                "soluong": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "email": "lan@gmail.com",
+        "password": "lan123",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 3",
+            "ward": "Phường 2",
+            "street": "312"
+        },
+        "spending": 180000,
+        "numberphone": "0345123456",
+        "status": "unlocked",
+        "name": "Nguyễn Lan",
+        "cart": [
+            {
+                "id": 3,
+                img: "./img/product/Case/iphone_anime (8).png",
+                name: "Ốp Lưng Vegeta",
+                price: 180000,
+                "soluong": 1
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "email": "khang@gmail.com",
+        "password": "khang123",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 1",
+            "ward": "Phường 1",
+            "street": "312"
+        },
+        "spending": 365000,
+        "numberphone": "0398765432",
+        "status": "unlocked",
+        "name": "Minh Khang",
+        "cart": [
+            {
+                "id": 12,
+                img: "./img/product/Case/samsung_sport (10).png",
+                name: "Ốp Lưng Barcelona",
+                price: 190000,
+                "soluong": 1
+            },
+            {
+                "id": 14,
+                img: "./img/product/Case/iphone_sport (12).png",
+                name: "Ốp Lưng Neymar JR",
+                price: 175000,
+                "soluong": 1
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "email": "hoa@gmail.com",
+        "password": "hoa456",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 5",
+            "ward": "Phường 5",
+            "street": "32"
+        },
+        "spending": 200000,
+        "numberphone": "0321987654",
+        "status": "unlocked",
+        "name": "Ngọc Hoa",
+        "cart": [
+            {
+                "id": 1,
+                img: "./img/product/Case/sumsung_anime (14).png",
+                name: "Ốp Lưng Naruto",
+                price: 200000,
+                "soluong": 1
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "email": "viet@gmail.com",
+        "password": "viet789",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 1",
+            "ward": "Phường 1",
+            "street": "2"
+        },
+        "spending": 510000,
+        "numberphone": "0367890123",
+        "status": "locked",
+        "name": "Văn Việt",
+        "cart": [
+            {
+                "id": 5,
+                img: "./img/product/Case/iphone_anime (10).png",
+                name: "Ốp Lưng Dragon Ball",
+                price: 170000,
+                "soluong": 3
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "email": "hung@gmail.com",
+        "password": "hung123",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 7",
+            "ward": "Phường 1",
+            "street": "392"
+        },
+        "spending": 420000,
+        "numberphone": "0376549871",
+        "status": "unlocked",
+        "name": "Trần Hùng",
+        "cart": [
+            {
+                "id": 16,
+                "img": "./img/product/Case/iphone_sport (17).png",
+                "name": "Ốp Lưng Argentina",
+                "price": 210000,
+                "soluong": 2
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "email": "mai@gmail.com",
+        "password": "mai567",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 3",
+            "ward": "Phường 7",
+            "street": "342"
+        },
+        "spending": 195000,
+        "numberphone": "0369854231",
+        "status": "unlocked",
+        "name": "Mai Phương",
+        "cart": [
+            {
+                "id": 7,
+                "img": "./img/product/Case/iphone_anime (14).png",
+                "name": "Ốp Lưng Uchiha",
+                "price": 195000,
+                "soluong": 1
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "email": "bao@gmail.com",
+        "password": "bao890",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 7",
+            "ward": "Phường 5",
+            "street": "343"
+        },
+        "spending": 1050000,
+        "numberphone": "0385671234",
+        "status": "unlocked",
+        "name": "Nguyễn Bảo",
+        "cart": [
+            {
+                "id": 20,
+                "img": "./img/product/Case/iphone_artwork (5).png",
+                "name": "Ốp Lưng tranh sơn dầu",
+                "price": 210000,
+                "soluong": 5
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "email": "tuan@gmail.com",
+        "password": "tuan901",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 1",
+            "ward": "Phường 5",
+            "street": "612"
+        },
+        "spending": 160000,
+        "numberphone": "0345678912",
+        "status": "unlocked",
+        "name": "Văn Tuấn",
+        "cart": [
+            {
+                "id": 9,
+                "img": "./img/product/Case/samsung_sport (15).png",
+                "name": "Ốp Lưng Messi",
+                "price": 160000,
+                "soluong": 1
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "email": "anh@gmail.com",
+        "password": "anh345",
+        "address": {
+            "city": "TP.Hồ Chí Minh",
+            "district": "Quận 5",
+            "ward": "Phường 3",
+            "street": "39"
+        },
+        "spending": 320000,
+        "numberphone": "0356789123",
+        "status": "locked",
+        "name": "Thúy Anh",
+        "cart": [
+            {
+                "id": 30,
+                "img": "./img/product/Case/samsung_game (6).png",
+                "name": "Ốp lưng Pikachu Power",
+                "price": 320000,
+                "soluong": 1
+            }
+        ]
+    }
+];
+// Kết hợp dữ liệu cũ và mới
+users = users.concat(newUsersList);
+
+// Lưu danh sách vào Local Storage
+localStorage.setItem('users', JSON.stringify(users));
+
+console.log("Danh sách người dùng đã được lưu vào Local Storage:");
+console.log(users);
+
+
+
+
+// Lấy danh sách đơn hàng hiện tại từ Local Storage
+let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+// Danh sách đơn hàng mới
+let newOrders = [
+    {
+        "userid": 1,
+        "orderId": "ORD-1733027174937",
+        "orderDate": "2024-12-01",
+        "fullName": "Quang Thắng",
+        "phone": "0377824412",
+        "address": "312, Phường 1, Quận 3, TP.Hồ Chí Minh",
+        "paymentMethod": "COD",
+        "cardNumber": "N/A",
+        "items": [
+            {
+                "productid": 6,
+                "name": "Ốp Lưng Wanted One Piece", // Sửa tên sản phẩm
+                "quantity": 1,
+                "price": 185000, // Cập nhật giá mới
+                "image": "./img/product/Case/iphone_anime (15).png" // Cập nhật hình ảnh
+            }
+        ],
+        "totalAmount": 185000, // Tổng tiền sửa theo sản phẩm
+        "statusText": "Chưa xử lý"
+    },
+    {
+        "userid": 2,
+        "orderId": "ORD-1733027174938",
+        "orderDate": "2024-12-02",
+        "fullName": "Nguyễn Lan",
+        "phone": "0345123456",
+        "address": "312, Phường 2, Quận 3, TP.Hồ Chí Minh",
+        "paymentMethod": "Online",
+        "cardNumber": "1234-5678-9012-3456",
+        "items": [
+            {
+                "productid": 3,
+                "name": "Ốp Lưng Vegeta", // Cập nhật tên
+                "quantity": 1,
+                "price": 180000, // Cập nhật giá
+                "image": "./img/product/Case/iphone_anime (8).png" // Cập nhật hình ảnh
+            }
+        ],
+        "totalAmount": 180000, // Tổng tiền sửa theo sản phẩm
+        "statusText": "Chưa xử lý"
+    },
+    {
+        "userid": 3,
+        "orderId": "ORD-1733027174939",
+        "orderDate": "2024-12-03",
+        "fullName": "Minh Khang",
+        "phone": "0398765432",
+        "address": "312, Phường 1, Quận 1, TP.Hồ Chí Minh",
+        "paymentMethod": "COD",
+        "cardNumber": "N/A",
+        "items": [
+            {
+                "productid": 12,
+                "name": "Ốp Lưng Barcelona", // Cập nhật tên
+                "quantity": 1,
+                "price": 190000, // Cập nhật giá
+                "image": "./img/product/Case/samsung_sport (10).png" // Cập nhật hình ảnh
+            },
+            {
+                "productid": 14,
+                "name": "Ốp Lưng Neymar JR", // Cập nhật tên
+                "quantity": 1,
+                "price": 175000, // Cập nhật giá
+                "image": "./img/product/Case/iphone_sport (12).png" // Cập nhật hình ảnh
+            }
+        ],
+        "totalAmount": 365000, // Cập nhật tổng tiền
+        "statusText": "Chưa xử lý"
+    },
+    {
+        "userid": 4,
+        "orderId": "ORD-1733027174940",
+        "orderDate": "2024-12-04",
+        "fullName": "Ngọc Hoa",
+        "phone": "0321987654",
+        "address": "32, Phường 5, Quận 5, TP.Hồ Chí Minh",
+        "paymentMethod": "Online",
+        "cardNumber": "5678-1234-9876-5432",
+        "items": [
+            {
+                "productid": 1,
+                "name": "Ốp Lưng Naruto", // Cập nhật tên
+                "quantity": 1,
+                "price": 200000, // Cập nhật giá
+                "image": "./img/product/Case/sumsung_anime (14).png" // Cập nhật hình ảnh
+            }
+        ],
+        "totalAmount": 200000, // Tổng tiền sửa theo sản phẩm
+        "statusText": "Đã giao hàng"
+    },
+    {
+        "userid": 5,
+        "orderId": "ORD-1733027174941",
+        "orderDate": "2024-12-05",
+        "fullName": "Văn Việt",
+        "phone": "0367890123",
+        "address": "2, Phường 1, Quận 1, TP.Hồ Chí Minh",
+        "paymentMethod": "COD",
+        "cardNumber": "N/A",
+        "items": [
+            {
+                "productid": 5,
+                "name": "Ốp Lưng Dragon Ball", // Cập nhật tên
+                "quantity": 3,
+                "price": 170000, // Cập nhật giá
+                "image": "./img/product/Case/iphone_anime (10).png" // Cập nhật hình ảnh
+            }
+        ],
+        "totalAmount": 510000, // Tổng tiền sửa theo số lượng
+        "statusText": "Đã giao hàng"
+    },
+    {
+        "userid": 6,
+        "orderId": "ORD-1733027174942",
+        "orderDate": "2024-12-06",
+        "fullName": "Trần Hùng",
+        "phone": "0376549871",
+        "address": "392, Phường 1, Quận 7, TP.Hồ Chí Minh",
+        "paymentMethod": "Online",
+        "cardNumber": "8765-4321-1234-5678",
+        "items": [
+            {
+                "productid": 16,
+                "name": "Ốp Lưng Argentina", // Cập nhật tên
+                "quantity": 2,
+                "price": 210000, // Cập nhật giá
+                "image": "./img/product/Case/iphone_sport (17).png" // Cập nhật hình ảnh
+            }
+        ],
+        "totalAmount": 420000, // Cập nhật tổng tiền
+        "statusText": "Đã giao hàng"
+    },
+    {
+        "userid": 7,
+        "orderId": "ORD-1733027174943",
+        "orderDate": "2024-12-07",
+        "fullName": "Mai Phương",
+        "phone": "0369854231",
+        "address": "342, Phường 7, Quận 3, TP.Hồ Chí Minh",
+        "paymentMethod": "COD",
+        "cardNumber": "N/A",
+        "items": [
+            {
+                "productid": 7,
+                "name": "Ốp Lưng Uchiha", // Cập nhật tên
+                "quantity": 1,
+                "price": 195000, // Cập nhật giá
+                "image": "./img/product/Case/iphone_anime (14).png" // Cập nhật hình ảnh
+            }
+        ],
+        "totalAmount": 195000, // Tổng tiền sửa theo sản phẩm
+        "statusText": "Đã giao hàng"
+    },
+    {
+        "userid": 8,
+        "orderId": "ORD-1733027174944",
+        "orderDate": "2024-12-08",
+        "fullName": "Nguyễn Bảo",
+        "phone": "0385671234",
+        "address": "343, Phường 5, Quận 7, TP.Hồ Chí Minh",
+        "paymentMethod": "Online",
+        "cardNumber": "5678-3456-9876-1234",
+        "items": [
+            {
+                "productid": 20,
+                "name": "Ốp Lưng tranh sơn dầu",
+                "quantity": 5,
+                "price": 210000,
+                "image": "./img/product/Case/iphone_artwork (9).png"
+            }
+        ],
+        "totalAmount": 1050000,
+        "statusText": "Đã giao hàng"
+    },
+    {
+        "userid": 9,
+        "orderId": "ORD-1733027174945",
+        "orderDate": "2024-12-09",
+        "fullName": "Văn Tuấn",
+        "phone": "0345678912",
+        "address": "612, Phường 5, Quận 1, TP.Hồ Chí Minh",
+        "paymentMethod": "COD",
+        "cardNumber": "N/A",
+        "items": [
+            {
+                "productid": 9,
+                "name": "Ốp Lưng Messi",
+                "quantity": 1,
+                "price": 160000,
+                "image": "./img/product/Case/samsung_sport (15).png"
+            }
+        ],
+        "totalAmount": 160000,
+        "statusText": "Đã giao hàng"
+    },
+    {
+        "userid": 10,
+        "orderId": "ORD-1733027174946",
+        "orderDate": "2024-12-10",
+        "fullName": "Thúy Anh",
+        "phone": "0356789123",
+        "address": "39, Phường 3, Quận 5, TP.Hồ Chí Minh",
+        "paymentMethod": "Online",
+        "cardNumber": "4321-8765-1234-5678",
+        "items": [
+            {
+                "productid": 30,
+                "name": "Ốp lưng Pikachu Power",
+                "quantity": 1,
+                "price": 320000,
+                "image": "./img/product/Case/samsung_game (6).png"
+            }
+        ],
+        "totalAmount": 320000,
+        "statusText": "Đã giao hàng"
+    }
+];
+// Thêm đơn hàng mới vào danh sách đơn hàng hiện tại
+orders.push(...newOrders); // Không gán lại biến orders
+
+// Lưu danh sách đơn hàng vào Local Storage
+localStorage.setItem('orders', JSON.stringify(orders));
+
+// In ra danh sách đơn hàng để kiểm tra
+console.log("Danh sách đơn hàng đã được lưu vào Local Storage:");
+console.log(orders);

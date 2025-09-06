@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--Biến các phiên bản cũ của Internet Explorer hiển thị hiện đại nhất-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Điều chỉnh kích thước trang web phù hơp với các thiết bị khác nhau-->
+    <!--width=device-width: độ rộng trang = độ rộng thiết bị-->
+    <!--initial-scale=1.0 : Đảm bảo trang không bị phóng to/ thu nhỏ khi mở-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link lấy icon / logo / css -->
+    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- folder ảnh: img -->
+
+    <!-- folder css: style.css -->
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="Purchase_History.css">
+
+
+    <!--Hình ảnh và chữ ở phần tab-->
+    <title>MOB Case</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/ico/favicon-16x16.png">
+    <link rel="manifest" href="./img/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body onload="indexLoadPage()">
+    <!-- HEADER -->
+    <div class="backdrop"></div>
+    <div id="header">
+        <div class="top_header">
+            <div class="bold top_header_text">Freeship. Bảo hành 1 đổi 1 trong vòng 2 năm</div>
+        </div>
+        <div class="under_header">
+            <div class="under_header_grid">
+                <div class="under_header--left">
+                    <a href="#" class="main_logo">
+                        <img src="./img/ico/apple-icon-72x72-removebg-preview.png" alt="">
+                        <span class="bold">MOBCase</span>
+                    </a>
+                </div>
+                <div class="under_header--center">
+                    <div class="under_header--center--info">
+                        <nav class="under_header--center--links" role="navigation">
+                            <ul class="contens_list_header" role="list">
+                                <li><a href="#" id="home-link">Trang chủ</a></li>
+                                <li><a href="#" class="">Ưu đãi hot</a></li>
+                                <li><a href="#" class="">Giới thiệu</a></li>
+                                <li><a href="#" class="">Giao hàng</a></li>
+                                <li><a href="#" class="">Liên hệ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="hamburger">☰
+
+                    </div>
+                </div>
+                <div class="under_header--right">
+                    <!-- tìm kiếm + giỏ hàng -->
+                    <div class="under_header--right--iconList">
+                        <a class="search" id="searchright"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a class="user">
+                            <span class="Opuser">
+                                <div class="gopurchase">Đơn hàng của bạn</div>
+                                <div class="gologout"><i class="fa-solid fa-right-from-bracket"></i>Thoát</div>
+                            </span>
+                            <i class="fa-solid fa-user"></i>
+                            <span id="tennguoidung"></span>
+                        </a>
+
+                        <a onclick="openCart()" id="open_cart_btn">
+                            <span class="count-product-cart">0</span>
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDER -->
+    <div id="slider">
+        <img src="./img/slider3.jpg" alt="" class="top_slider">
+    </div>
+    <!-- MAIN -->
+    <div id="main">
+        <!-- CONTENT -->
+        <div id="content">
+            <!-- top-content -->
+            <div class="top_content">
+                <h1 class="text_content_header topic_header">Hiện đại - Sang Trọng - Thời trang</h1>
+                <div class="under_text_box">
+                    <h3 class="under_text">Modern - Luxurious - Fashion</h3>
+                </div>
+            </div>
+
+            <!-- center-content -->
+            <div class="center_content" id="center-content">
+                <!-- khu sản phẩm chính -->
+                <div class="container">
+                    <!-- container_header -->
+                    <div id="SanPhamMoi" class="main_product_text topic_header gradient-text">
+                        <h2>khám phá các sản phẩm mới nhất</h2>
+                    </div>
+
+                    <!-- Bộ lọc sản phầm -->
+                    <div class="filter_content">
+                        <div href="##" class="filter_button bold blur" onclick="toggleFilterMenu()">
+                            <i class="fa-solid fa-sliders"></i>
+                            <strong>BỘ LỌC</strong>
+                        </div>
+                        <div class="filter_menu">
+                            <!-- Danh sách loại sản phẩm -->
+                            <ul class="filter-list">
+                                <li class="filter-item" data-category="All" onclick="filterProduct('All')">All</li>
+                                <li class="filter-item" data-category="Anime" onclick="filterProduct('Anime')">Anime
+                                </li>
+                                <li class="filter-item" data-category="Sport" onclick="filterProduct('Sport')">Sport
+                                </li>
+                                <li class="filter-item" data-category="Art" onclick="filterProduct('Art')">Art</li>
+                                <li class="filter-item" data-category="Game" onclick="filterProduct('Game')">Game</li>
+                                <li class="filter-item" data-category="Cartoon" onclick="filterProduct('Cartoon')">
+                                    Cartoon</li>
+                            </ul>
+
+                            <!-- Phần lọc theo giá -->
+                            <div class="filter-price">
+                                <!-- khoảng lọc tự nhập -->
+                                <div class="manual-price-filter">
+                                    <strong style="color: var(--price-color); font-size: 18px;">Lọc sản phẩm theo khoảng
+                                        giá</strong>
+                                    <label for="manualMinPrice">Nhập giá bắt đầu:</label>
+                                    <input type="number" id="manualMinPrice" placeholder="Từ (VND)" min="0"
+                                        oninput="validatePriceInput(event)" onblur="validateManualPriceInput()">
+
+                                    <label for="manualMaxPrice">Nhập giá kết thúc:</label>
+                                    <input type="number" id="manualMaxPrice" placeholder="Đến (VND)" min="0"
+                                        oninput="validatePriceInput(event)" onblur="validateManualPriceInput()">
+
+                                    <button class="accept-filter-button" onclick="applyManualPriceFilter()">Lọc
+                                        giá</button>
+                                </div>
+                            </div>
+
+
+                            <!-- sắp xếp sản phẩm theo giá -->
+                            <div class="sort_price">
+                                <button class="sort_button" onclick="sortPrice('asc')">
+                                    Giá: thấp đến cao
+                                </button>
+                                <button class="sort_button" onclick="sortPrice('desc')">
+                                    Giá: cao đến thấp
+                                </button>
+                            </div>
+
+                            <!-- nút reset filter -->
+                            <div class="reset-filter">
+                                <button class="reset_button" onclick="resetFilters()">Đặt lại</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="filter_primary_nav">
+                        <div class="filter_button_nav" onclick="toggleFilterMenuMobile()">
+                            <i class="fa-solid fa-sliders"></i>
+                            <div>Bộ lọc và sắp xếp</div>
+                        </div>
+                        <!-- Danh sách bộ lọc ẩn -->
+                        <div class="filter_menu">
+                            <ul class="filter-list">
+                                <li class="filter-item" onclick="filterProduct('All')">All</li>
+                                <li class="filter-item" onclick="filterProduct('Anime')">Anime</li>
+                                <li class="filter-item" onclick="filterProduct('Sport')">Sport</li>
+                                <li class="filter-item" onclick="filterProduct('Art')">Art</li>
+                                <li class="filter-item" onclick="filterProduct('Game')">Game</li>
+                                <li class="filter-item" onclick="filterProduct('Cartoon')">Cartoon</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter_secondary_nav">
+                        <div class="filter_button_nav" onclick="toggleFilterMenu()">
+                            <i class="fa-solid fa-sliders"></i>
+                            <div>Bộ lọc và sắp xếp</div>
+                        </div>
+
+                        <div class="filter_list_mobile">
+                            <ul class="filter-list-mobile">
+                                <li class="filter-item-mobile" onclick="selectFilterMobile('All')">All</li>
+                                <li class="filter-item-mobile" onclick="selectFilterMobile('Anime')">Anime</li>
+                                <li class="filter-item-mobile" onclick="selectFilterMobile('Sport')">Sport</li>
+                                <li class="filter-item-mobile" onclick="selectFilterMobile('Art')">Art</li>
+                                <li class="filter-item-mobile" onclick="selectFilterMobile('Game')">Game</li>
+                                <li class="filter-item-mobile" onclick="selectFilterMobile('Cartoon')">Cartoon</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- khu sản phẩm chính -->
+                <div id="main_product">
+                    <div class="product_detail"></div>
+
+                    <!-- Chi tiết sản phẩm -->
+
+
+                </div>
+
+                <!--Checkout-->
+                <div id="checkout_page" class="checkout_page">
+                    <div class="checkout_header">
+                        <div id="checkout_return" class="checkout_return">
+                            <span onclick="closecheckout()">&times;</span>
+                        </div>
+                        <h2 class=" checkout_title">Thanh toán</h2>
+                    </div>
+                    <div class="checkout_container">
+                        <div class="checkout_col_left">
+                            <div class="checkout_row">
+                                <div class="checkout_col_title">Giao hàng</div>
+                                <div class="checkout_content">
+                                    <div class="content_group">
+                                        <div class="delivery-form">
+
+                                            <div class="delivery-method">
+                                                <input type="radio" id="acc-location" name="location"
+                                                    value="acc-location">
+                                                <label for="acc-location">
+                                                    <span>Chọn địa chỉ từ tài khoản</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="delivery-method">
+                                                <input type="radio" id="new-location" name="location"
+                                                    value="new-location">
+                                                <label for="new-location">
+                                                    <span>Nhập địa chỉ giao hàng mới</span>
+                                                </label>
+                                                <div class="details hidden">
+                                                    <!-- Số nhà, đường -->
+                                                    <div class="form-group">
+                                                        <label for="address">Số nhà, đường .v.v</label>
+                                                        <input type="text" id="address"
+                                                            placeholder="Nhập số nhà, đường">
+                                                    </div>
+
+                                                    <!-- Tỉnh, Quận, Phường -->
+                                                    <div class="form-group multi-select">
+                                                        <div>
+                                                            <label for="city">Tỉnh/Thành phố</label>
+                                                            <select id='provinces'>
+                                                                <option selected>Chọn tỉnh/thành phố</option>
+                                                                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="district">Quận/Huyện</label>
+                                                            <select id='districts'>
+                                                                <option selected>Chọn Quận/Huyện</option>
+                                                                <option value="Quận 1">Quận 1</option>
+                                                                <option value="Quận 3">Quận 3</option>
+                                                                <option value="Quận 5">Quận 5</option>
+                                                                <option value="Quận 7">Quận 7</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label for="ward">Phường/Xã</label>
+                                                            <select id='wards'>
+                                                                <option selected>Chọn Phường/Xã</option>
+                                                                <option value="Phường 1">Phường 1</option>
+                                                                <option value="Phường 2">Phường 2</option>
+                                                                <option value="Phường 3">Phường 3</option>
+                                                                <option value="Phường 4">Phường 4</option>
+                                                                <option value="Phường 5">Phường 5</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Quốc gia -->
+                                                    <div class="form-group">
+                                                        <label for="country">Quốc gia/Vùng</label>
+                                                        <select id="country">
+                                                            <option selected>Việt Nam</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <!-- Họ tên -->
+                                                    <div class="form-group multi-input">
+                                                        <div>
+                                                            <label for="first-name">Tên</label>
+                                                            <input type="text" id="first-name" placeholder="Nhập tên">
+                                                        </div>
+                                                        <div>
+                                                            <label for="last-name">Họ</label>
+                                                            <input type="text" id="last-name" placeholder="Nhập họ">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Mã bưu chính -->
+                                                    <div class="form-group">
+                                                        <div>
+                                                            <label for="postal-code">Mã bưu chính (không bắt
+                                                                buộc)</label>
+                                                            <input type="text" id="postal-code"
+                                                                placeholder="Nhập mã bưu chính">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Điện thoại -->
+                                                    <div class="form-group">
+                                                        <label for="phone">Điện thoại</label>
+                                                        <input type="text" maxlength="10" id="phone"
+                                                            placeholder="Nhập số điện thoại">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="checkout_row">
+                                <div class="checkout_col_title">Thanh toán</div>
+                                <div class="checkout_content">
+                                    <div class="content_group">
+                                        <div class="payment-methods">
+                                            <div class="method">
+                                                <input type="radio" id="onepay" name="payment" value="onepay">
+                                                <label for="onepay">
+                                                    <span>OnePay - Thanh toán trực tuyến</span>
+                                                    <img alt="Visa"
+                                                        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.vi/assets/visa.sxIq5Dot.svg">
+                                                    <img alt="Mastercard"
+                                                        src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.vi/assets/master.CzeoQWmc.svg">
+                                                </label>
+                                                <div class="details hidden">
+                                                    <form action="">
+                                                        <div class="inputBox">
+                                                            <span>Số thẻ*</span>
+                                                            <input type="text" maxlength="19" class="cardNumber_input"
+                                                                placeholder="1234 5678 1234 5678" required>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="method">
+                                                <input type="radio" id="cod" name="payment" value="cod">
+                                                <label for="cod">
+                                                    <span>Thanh toán khi nhận hàng (COD)</span>
+                                                </label>
+                                                <div class="details hidden">
+                                                    <p>Nhân viên giao hàng sẽ liên lạc bạn trước khi giao hàng.</p>
+                                                    <p>Tiền COD sẽ được thu khi nhận hàng.</p>
+                                                </div>
+                                            </div>
+                                            <div class="method">
+                                                <input type="radio" id="bank" name="payment" value="bank">
+                                                <label for="bank">
+                                                    <span>Chuyển khoản</span>
+                                                </label>
+                                                <div class="details hidden">
+                                                    <p>Chuyển khoản vào tài khoản ngân hàng của chúng tôi qua mã QR.
+                                                        <br>
+                                                        Vui lòng ghi rõ thông tin đặt hàng khi chuyển khoản.
+                                                    </p>
+                                                    <img style="max-width: 200px;" src="./img/qr.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout_col_right">
+                            <p class="checkout_content_label">Đơn hàng</p>
+                            <div class="bill_total" id="list_order_checkout"></div>
+                            <div class="bill_payment">
+                                <div id="bill_tax"></div>
+                            </div>
+                            <div class="total_checkout">
+                                <div class="text">Tổng tiền</div>
+                                <div class="price_bill">
+                                    <div class="price_final" id="tongtien_gia_checkout">0</div>
+                                </div>
+                            </div>
+                            <button class="complete_checkout_btn" id="place-order-btn">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- phân trang -->
+                <div class="page-nav">
+                    <ul class="page-nav-list">
+                        <!-- Danh sách các trang tiếp theo sau khi chuyển-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bot_content -->
+    <div>
+    </div>
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="footer_infor">
+            <!-- left-footer -->
+            <div class="left_footer">
+                <p class="email">
+                    <strong>Email:</strong>
+                    <a href="##">MOBCaseVN@gmail.com</a>
+                </p>
+                <p class="hotline">
+                    <strong>Hotline (Chăm sóc khách hàng):</strong>
+                    <br class="hotline_num">086 995 6512<br>
+                </p>
+                <p class="address_1">
+                    <strong>Việt Nam:</strong>
+                    <br> 660 Quang Trung 2, P.Đông Vệ, Q.6, TP.HCM. <br>
+                </p>
+                <p class="address_2">
+                    <strong>Singapore:</strong>
+                    <br>25 Avenue Forfar Heights Strathmore, 110305.<br>
+                </p>
+                <p class="address_3">
+                    <strong>Đại diện tại:</strong>
+                    <br>
+                    Hoa Kỳ, Indonesia, Malaysia, Philippines, Thái Lan.
+                    <br>Liên hệ để biết thêm chi tiết.<br>
+                </p>
+            </div>
+            <!-- center-footer -->
+            <div class="center_footer">
+                <ul class="center_footer_list">
+                    <li><a href="##">Giới thiệu - MOB Case</a></li>
+                    <li><a href="##">Điều khoản dịch vụ</a></li>
+                    <li><a href="##">Chính sách kiểm và nhận hàng</a></li>
+                    <li><a href="##">Chính sách bảo hành</a></li>
+                    <li><a href="##">Chính sách bảo mật</a></li>
+                    <li><a href="##">Chính sách thanh toán</a></li>
+                    <li><a href="##">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+            <!-- right-footer -->
+            <div class="right_footer">
+                <div class="feedback">
+                    <p></p>
+                    <form></form>
+                </div>
+                <div class="social_media">
+                    <div style="opacity: 0.7; font-size: 18px; margin-bottom: 16px;">
+                        <strong>Theo dõi chúng mình để nhận thêm nhiều ưu đãi bạn nhé !</strong>
+                    </div>
+                    <a href="##"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="##"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="##"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="##"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="porose">
+                    <a href="##"><img alt="bocongthuong" src="./img/footer_img/logo_bocongthuong.webp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- under-footer -->
+        <div class="under_footer">
+            <div class="copyright">
+                <strong>© 2024, MOBCase Vietnam. All Rights Reserved.</strong>
+            </div>
+            <ul class="payment_icon">
+                <li><img alt="ApplePay_card" src="./img/footer_img/ApplePay_Card.webp"></li>
+                <li><img alt="Mastercard_card" src="./img/footer_img/Mastercard_Card.webp"></li>
+                <li><img alt="Paypal_card" src="./img/footer_img/PayPal_Card.webp"></li>
+                <li><img alt="Visa_card" src="./img/footer_img/Visa_Card.webp"></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Back to top website -->
+    <div class="back-to-top">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+    <!-- Giỏ hàng -->
+    <div id="sidecart" class="sidecart">
+        <div class="cart_content">
+            <div class="cart_header">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <div class="header_title">
+                    <h2>Giỏ hàng</h2>
+                </div>
+                <span onclick="closeCart()" class="close_btn">&times;</span>
+            </div>
+            <div class="cart_item"></div>
+            <div class="cart_action">
+                <div class="tongtien">
+                    <p>Tổng tiền:</p>
+                    <p><span class="tongtien_gia">0</span></p>
+                </div>
+                <button onclick="closeCart()"><i class="fa-regular fa-plus"
+                        style="font-weight: 400; padding: 0px 4px;"></i>Thêm sản phẩm</button>
+                <button onclick="thanhToan()">Thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Search" id="search">
+        <div class="wrap_search">
+            <div class="inputsearch">
+                <input type="text" class="search_input" id="search-input" placeholder="Tìm kiếm sản phẩm">
+                <div style="display: flex;">
+                    <div id="clearsearch" class="Sclear">Clear</div>
+                    <div class="closeSearch">X</div>
+                </div>
+            </div>
+            <div class="history_search" id="searchHistory">
+                <ul class="history_list">
+                    <li class="history_item">
+                        <a href=""></a>
+                        <button class="delete_history"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="loginModal" class="modal"> <!-- Đặt modal bên trong NenWeb -->
+        <div class="wrapper">
+            <span class="close-btn" onclick="hideLoginForm()">&times;</span>
+
+            <div id="notification" class="notification"></div>
+            <div class="form-wrapper sign-in">
+                <form action="" id="loginForm">
+                    <h2>Đăng Nhập</h2>
+                    <div class="input-group">
+                        <input type="text" id="username" required placeholder="" autocomplete="username">
+                        <label for="username">Email</label>
+                        <i class="fa-regular fa-user" id="user" onclick="focusInput('username')"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" required placeholder="" autocomplete="current-password">
+                        <label for="password">Mật khẩu</label>
+                        <i class="fa-regular fa-eye" id="eye"></i>
+                    </div>
+                    <button id="loginButton" type="submit" class="button">Đăng Nhập</button>
+                    <div class="signUp-link">
+                        <p>Chưa có tài khoản?
+                            <a href="#" class="signUpBtn-link">Đăng Ký</a>
+                        </p>
+                    </div>
+                </form>
+                <p id="loginMessage" class="form-message"></p> <!-- Dòng thông báo dưới form đăng nhập -->
+            </div>
+
+            <div class="form-wrapper sign-up">
+                <form action="" id="registerForm">
+                    <h2>Đăng ký</h2>
+                    <div class="input-group">
+                        <input type="text" id="registerUsername" required placeholder="" autocomplete="username">
+                        <label for="registerUsername">Email</label>
+                        <i class="fa-regular fa-user" id="user" onclick="focusInput('registerUsername')"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerPassword" required placeholder=""
+                            autocomplete="new-password">
+                        <label for="registerPassword">Mật khẩu</label>
+                        <i class="fa-regular fa-eye" id="regEye"></i>
+                    </div>
+                    <div class="remember">
+                        <label>
+                            <input type="checkbox" id="registerCheckbox" required>Tôi đồng ý với các điều khoản của
+                            MOBCase.
+                        </label>
+                    </div>
+                    <button type="submit" id="registerButton" class="button">Đăng Ký</button>
+                    <div class="signUp-link">
+                        <p>Đã có tài khoản?
+                            <a href="#" class="signInBtn-link">Đăng Nhập</a>
+                        </p>
+                    </div>
+                </form>
+                <p id="registerMessage" class="form-message"></p> <!-- Dòng thông báo dưới form đăng ký -->
+            </div>
+        </div>
+    </div>
+    <div class="container_Pur">
+        <div class="content_left">
+            <div class="order_form"><i class="fa-solid fa-receipt"></i>Đơn Hàng</div>
+            <div class="address"><i class="fa-solid fa-address-card"></i>Địa chỉ giao hàng</div>
+            <div class="logout Bold" id="dangxuat">Đăng Xuất</div>
+        </div>
+        <div class="content_right">
+            <div class="Tieude">
+                <div class="donhang Bold">Đơn hàng của bạn</div>
+                <div class="thoigian">Từ ngày 31/12/2023 đến 31/12/2024</div>
+            </div>
+            <div class="state">Tất cả</div>
+            <div class="midcart">
+                <div class="info_location">
+                    <p>Vui lòng cung cấp thông tin khi nhận hàng</p>
+                    <div></div>
+                </div>
+                <div class="product_list">
+                    <!-- Sản phẩm sẽ được thêm ở đây -->
+                </div>
+            </div>
+        </div>
+        <div class="Location_customer">
+            <h2>Thông tin tài khoản</h2>
+            <div class="info">
+                <h3>Thông tin cá nhân</h3>
+                <div class="edit">
+                    <div class="name_phone" id="namePhone"></div>
+                    <div id="edit-label"><i class="fa-solid fa-pen-to-square"></i> Sửa</div>
+                </div>
+                <!-- New line for address -->
+                <div class="address_info" id="addressInfo">Địa chỉ giao hàng: Chưa cập nhật</div>
+
+
+                <div class="edit-info" id="editInfo">
+                    <input type="text" class="edit-name" id="editName" placeholder="Nhập tên mới" />
+                    <input type="text" class="edit-phone" id="editPhone" placeholder="Nhập số điện thoại mới" />
+                    <h3 class="Bold">Địa chỉ nhận hàng:</h3>
+                    <div class="content_address">
+                        <select name="" id="selecCity">
+                            <option selected>Chọn Tỉnh/thành</option>
+                            <option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option>
+                        </select>
+                        <select name="" id="selecDistric">
+                            <option selected>Chọn Quận/Huyện</option>
+                            <option value="Quận 1">Quận 1</option>
+                            <option value="Quận 3">Quận 3</option>
+                            <option value="Quận 5">Quận 5</option>
+                            <option value="Quận 7">Quận 7</option>
+                        </select>
+                        <select name="" id="selecWard">
+                            <option selected>Chọn Phường/Xã</option>
+                            <option value="Phường 1">Phường 1</option>
+                            <option value="Phường 2">Phường 2</option>
+                            <option value="Phường 3">Phường 3</option>
+                            <option value="Phường 4">Phường 4</option>
+                            <option value="Phường 5">Phường 5</option>
+                        </select>
+                        <input type="text" placeholder="Số nhà, tên đường*" id="addressInput" required />
+                    </div>
+                    <input type="checkbox" id="defaultAddress" checked disabled> Đặt làm địa chỉ mặc định
+                    <div class="update">
+                        <div class="capnhat" id="submitBtn">Cập nhật</div>
+                        <div class="cancel" id="cancelBtn"
+                            style="background-color: red; color: white; cursor: pointer; display: inline-flex; justify-content: center; align-items: center; padding: 10px 20px; margin-left: 20px; border-radius: 5px;">
+                            Hủy
+                        </div>
+                    </div>
+                    <p id="errorMessage" style="color: red; display: none; padding-left: 35%;">Vui lòng điền đầy đủ
+                        thông tin địa chỉ!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Delivery_wrap">
+            <div class="Delivery_top">
+                <div class="Delivery_left">
+                    <div class="id_product">Chi tiết đơn hàng: <!--ID đơn hàng--><span>- Đã nhận hàng
+                            <!--Trạng thái--></span></div>
+                    <div class="Delivery_info">
+                        <div class="ttnh"><i class="fa-solid fa-location-dot"></i>THÔNG TIN NHẬN HÀNG</div>
+                        <div class="flex">
+                            <div class="Delivery_info_left">
+                                <div>Người nhận: </div>
+                                <div>Nhận tại:</div>
+                                <div>Đặt lúc: </div>
+                            </div>
+                            <div class="Delivery_info_right">
+                                <div class="userId"><!--userId--> - <!--phoneNumber--></div>
+                                <div class="address1"><!--address--></div>
+                                <div class="orderDate"><!--orderDate--></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Delivery_right">
+                    <div class="time_del">Đặt lúc: <span class="orderDate"><!--orderDate--></span></div>
+                    <div class="Payment_wrap">
+                        <div class="PaymentMethod"><i class="fa-solid fa-money-check"></i>HÌNH THỨC THANH TOÁN</div>
+                        <div class="COD"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Delivery_content">
+                <div class="Delivery_content_top"><i class="fa-solid fa-bag-shopping"></i> THÔNG TIN SẢN PHẨM</div>
+                <div id="Product_chitiet">
+                    <!-- Thêm sản phẩm vào đây -->
+                </div>
+                <div class="Money">
+                    <div class="settle">Tổng tiền: <span class="settleAmount"></span></div>
+                </div>
+                <div class="goback">
+                    <div class="buttonback">VỀ TRANG DANH SÁCH ĐƠN HÀNG</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast" style="display: none;">Thông báo!</div>
+    <!-- script -->
+    <script src="./js/Purchase_History.js"></script>
+    <script src="./js/initialization.js"></script>
+    <script src="./js/checkout.js"></script>
+    <script src="./js/Search.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

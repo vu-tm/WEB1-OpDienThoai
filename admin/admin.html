@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="trangtongquan.css">
+    <link rel="stylesheet" href="trangsanpham.css">
+    <link rel="stylesheet" href="trangthongke.css">
+    <link rel="stylesheet" href="tranggiohang.css">
+    <link rel="stylesheet" href="quanlinguoidung.css">
+    <link rel="stylesheet" href="bill.css">
+    <link rel="stylesheet" href="chitietsanphammodal.css">
+    <title>Quản lý cửa hàng</title>
+</head>
+<body>
+
+
+<div id="content_admin">
+
+
+
+
+
+
+
+    <header class="header">
+        <div class="menu-icon" id="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="header-logo">
+            administrator
+        </div>
+        
+        <div class="header-right" id="logoutadmin">
+            <i class="fa-solid fa-user"></i> Đăng xuất
+        </div>
+    </header>
+
+
+
+    <div class="container">
+
+
+
+
+
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo-container">
+
+                <div class="text-slimcase">
+                    <span>MOB Case</span>
+                </div>
+
+
+               <div class="logo-modal-container" id="logo-modal-container">
+
+                    <div class="logo-icon" id="logo-icon">
+                        <a href="javascript:void(0);" onclick="showModal()">
+                            <i class="fa-solid fa-gear"></i>
+                        </a> 
+                    </div>
+                
+                    <div class="modal-admin-header" id="info-admin-header">
+                        <div class="modal-admin-content-header">
+                            <div class="modal-admin-close" onclick="closeModal()"><i class="fa-solid fa-x"></i></div>
+
+                            <div class="noidunginfoadmin"> 
+                                <div class="header-logo-infoadmin"> <b>THÔNG TIN ADMIN</b>
+
+                                </div>
+
+                                <div class="bottom-info-admin-logo">
+                                    <div><b> TÊN:</b> 5 AE SIÊU NHÂN</div>
+                                    <div><b>SĐT:</b> 19001001</div>
+                                    <div><b>NGÀY THÀNH LẬP:</b> Khá lâu</div>
+                                    <div><b>THÀNH TỰU :</b> Sắp có</div>
+                                    <div><b>NGÀY TAN RÃ:</b>Cuối kì</div>
+                                    </div>
+
+                            </div>
+                            <!-- Nội dung modal -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="trangtongquan active" onclick="navigateTo('dashboard')" style="padding-right: 32px;">
+                <i class="fa-solid fa-house"></i>
+                Trang tổng quan
+            </div>
+            
+            
+
+            <div class="trangtongquan" onclick="navigateTo('contentsanpham')" style="padding-right: 82px;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Sản phẩm
+            </div>
+            
+
+            <div class="trangtongquan" onclick="navigateTo('customers')" style="padding-right: 63px;">
+                <i class="fa-solid fa-users"></i>
+                Khách hàng
+            </div>
+
+            
+            <div class="trangtongquan" onclick="navigateTo('cart')" style="padding-right: 85px;">
+                <i class="fa-solid fa-basket-shopping"></i>
+                Đơn hàng
+            </div>
+            
+            <div class="trangtongquan" onclick="navigateTo('statistics')" style="padding-right: 82px;">
+                <i class="fa-solid fa-chart-line"></i>
+                Thống kê
+            </div>
+            
+           
+            
+
+
+
+
+            
+            <div class="logout" id="logoutAdmin">
+                
+                    <i class="fa-solid fa-sign-out-alt"></i> Đăng xuất
+               
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- Content area -->
+        <div class="content">
+            <div class="overflow-content">
+
+
+
+
+
+
+
+
+                <div class="content-section active" id="dashboard">
+                    <div class="trangtongquancon">
+
+                        <div class="header_tongquan">
+                            <div class="header_icon_tongquan">
+                                <i class="fa-solid fa-gear"></i>
+                            </div>
+                            <b>MOB CASE - MUA ĐI VÌ TIỀN CỦA BẠN, KHÔNG PHẢI CỦA TÔI</b>
+                        </div>
+                
+                        <div class="content_tongquan">
+                            <div class="box_tongquan">
+                                <div class="box_itemtongquan">
+                                    <div class="boxleft">
+                                        <img src="img/retouch_2024102718553904.png" alt="" style="width: 95%;">
+                
+                                    </div>
+                                    <div class="boxright">
+                                        <h2>Khách Hàng</h2>
+                                        <h3>"Luôn đặt khách hàng làm trung tâm"</h3>
+                                        <p>Khách hàng là ưu tiên hàng đầu. Chúng ta phải luôn lắng nghe và đáp ứng nhu cầu của họ. 
+                                            Dù có khó khăn, tất cả các thành viên phải cùng nhau tìm giải pháp để giữ khách hàng hài lòng. 
+                                            Không ngừng cải thiện và nâng cao trải nghiệm dịch vụ là trách nhiệm của từng người.</p>
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                            <div class="box_tongquan">
+                                <div class="box_itemtongquan">
+                                    <div class="boxleft">
+                                        <img src="img/retouch_2024102718570536.png" alt="" style="width: 100%;">
+                
+                                    </div>
+                                    <div class="boxright">
+                                        <h2>Sản Phẩm</h2>
+                                        <h3>"Phát triển và đa dạng hóa sản phẩm"</h3>
+                                        <p>Đảm bảo tính đa dạng, sáng tạo trong từng sản phẩm.
+                                            Không ngừng cập nhật xu hướng và thử nghiệm cái mới để sản phẩm của chúng ta luôn phong phú và 
+                                            phù hợp với nhiều đối tượng khách hàng.
+                                            Đặt mục tiêu mỗi sản phẩm đều phải đạt tiêu chuẩn chất lượng cao, đảm bảo uy tín cho cửa hàng.</p>
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                            <div class="box_tongquan">
+                                <div class="box_itemtongquan">
+                                    <div class="boxleft">
+                                        <img src="img/retouch_2024102719002559.png" alt="" style="width: 100%;">
+                
+                                    </div>
+                                    <div class="boxright">
+                                        <h2>Chất Lượng</h2>
+                                        <h3>"Không thỏa hiệp về chất lượng"</h3>
+                                        <p>Mọi sản phẩm đều phải được kiểm tra kỹ lưỡng.
+                                            Chúng ta không được phép để sản phẩm có lỗi đến tay khách hàng.
+                                            Chất lượng là yếu tố tạo nên sự tin cậy và danh tiếng của cửa hàng.
+                                            Vì vậy, mỗi cá nhân cần tự giác trong từng chi tiết, dù nhỏ nhất, để đạt được chuẩn mực chất lượng cao nhất.</p>
+                                    </div>
+                                </div>
+                                
+                
+                            </div>
+                            <div class="box_tongquan">
+                                <div class="box_itemtongquan">
+                                    <div class="boxleft">
+                                        <img src="img/retouch_2024102719081198.png" alt="" style="width: 100%;">
+                
+                                    </div>
+                                    <div class="boxright">
+                                        <h2 style="left: -3px;">Đội Ngũ</h2>
+                                        <h3 style="left: -5px; text-align: left; margin-top: -10px;">"Xây dựng đội ngũ tận tâm, chuyên nghiệp"</h3>
+                                        <p style="margin-top: 0px;">Mỗi thành viên là một phần quan trọng của đội ngũ.
+                                            Chúng ta phải làm việc với tinh thần trách nhiệm, sẵn sàng hỗ trợ lẫn nhau để cùng phát triển.
+                                            Không ngừng học hỏi, nâng cao kỹ năng và luôn giữ tinh thần chủ động.
+                                            Đoàn kết và nhiệt huyết của cả nhóm là động lực chính giúp cửa hàng phát triển bền vững.</p>
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                          
+                
+                
+                                
+                    </div>
+                    </div>
+                    
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="content-section" id="contentsanpham">
+
+
+                    <div id="productListSection" style="height: 100vh; overflow: auto;">
+
+                        <div class="title_product">
+                            <b style="margin-left: 20px;"> Quản lí sản phẩm </b>
+                        </div>
+
+
+                            <div class="content_sanpham">
+
+                                <div style="width: 100%; height: 30%;">
+
+                                    <div style="background-color: #fff;padding: 10px;">
+
+                                        <div class="move" onclick="showAddProductForm()">
+                                            <span >
+                                                <i class="fa-solid fa-plus"></i><span> Thêm sản phẩm </span>
+                                            </span> 
+                                        </div>
+
+                                        <hr>
+
+                                    
+                                    
+                                    </div>
+
+                                    <div style="margin: 15px;background-color: #ffff;width: 97%;border-radius: 3px;padding: 8px;" >
+
+                                        <table id="productTable">
+                                            <thead>
+                                            <tr>
+                                                <th>Mã sản phẩm</th>
+                                                <th>Mẫu ốp lưng</th>
+                                                <th>Tên ốp lưng</th>
+                                                <th>Dòng điện thoại</th>
+                                                <th>Ảnh</th>
+                                                <th>Giá</th>
+                                                <th>Số lượng</th>
+                                                <th>Tính năng</th>
+                                            </tr>
+                                        
+                                        </thead>
+                
+                                        <tbody>
+
+                                        </tbody>
+                                        
+                                        </table>
+                                        
+                                    </div>  
+
+                                </div>
+
+                            </div>
+                    </div>
+
+
+                    <div id="addProductSection" class="hidden" style="width: 100%;padding: 15px;overflow: auto;">
+
+                        <div class="title_product" style="padding-left: 20px;padding-top: 15px;">
+                            <span style="font-size: 25px;"><b>Quản lí sản phẩm / Thêm sản phẩm</span></b>
+                        </div>
+
+                        <div class="content_sanpham">
+
+                            <div class="add-product">
+                                <span>Tạo mới sản phẩm</span>
+                            </div>
+
+                            <hr class="yellow-line">
+                            
+                             <div class="status">
+                                <span>Thông tin chung</span>
+                            </div>
+                            
+                           
+                            <hr class="line">
+                            <div class="add-product2" style="width: 100%;text-align: center;">
+                                <div class="box">
+                                    <div>
+                                        <span>Dòng ốp lưng</span>
+                                    </div>
+                                    <div>
+                                        <select id="case" name="case">
+                                            <option value="" disabled selected>-Chọn loại ốp lưng-</option>
+                                            <option value="Anime">Anime</option>
+                                            <option value="Sport">Sport</option>
+                                            <option value="Art">Art</option>
+                                            <option value="Game">Game</option>
+                                            <option value="Cartoon">Cartoon</option>
+                                            
+                                        </select>                           
+                                    </div>
+                                </div>
+
+
+                                <div class="box">
+                                    <div>
+                                        <span>Thương hiệu</span>
+                                    </div>
+                                    <div>
+                                        <select id="productBrand" name="productBrand">
+                                            <option value="" disabled selected>-Chọn thương hiệu-</option>
+                                            <option value="Apple">Apple</option>
+                                            <option value="Samsung">Samsung</option>
+                                           
+                                        </select>                        
+                                    </div>
+                                </div>
+
+
+                                <div class="box">
+                                    <div>
+                                        <span>Mẫu điện thoại</span>
+                                    </div>
+                                    <div>
+                                        <input type="text" id="productModel" name="productModel">                        
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            
+                            <div class="add-product2" style="width: 100%;text-align: center;">
+
+                                <div class="box">
+
+                                    <div>
+                                        <span>Tên ốp lưng</span>
+                                    </div>
+
+                                    <div>
+                                        <input type="text" id="productName" name="productName">                        
+                                    </div>
+
+                                </div>
+
+
+                                <div class="box">
+                                    <div>
+                                        <span>Giá bán</span>
+                                    </div>
+                                    <div>
+                                        <input type="text" id="productPrice" name="productPrice">                        
+                                    </div>
+                                </div>
+
+                                <div class="box">
+
+                                    <div>
+                                        <span>Số lượng</span>
+                                    </div>
+
+                                    <div>
+                                        <input type="text" id="productQuantity" name="productQuantity">                        
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            
+                            <div>
+
+                                <div class="add-product2" style="margin-top: 10px;">
+                                    <span>Ảnh sản phẩm</span>
+                                </div>
+                                
+                                <div class="icon_sanpham">
+                                    <!-- Sử dụng <label> để chọn ảnh -->
+                                        <label for="productImage" style="cursor: pointer;">
+                                            <input type="file" id="productImage" name="productImage" accept="image/*" style="display: none;">
+                                            <i class="fa-solid fa-cloud-arrow-up"></i><span> Chọn Ảnh</span>
+                                        </label>
+                                </div>
+
+                            </div>
+
+                            
+
+                            <div id="fileNameDisplay"></div>    
+
+
+                            <div class="add-product3">
+                                <span>Mô tả sản phẩm</span>
+                            </div>
+
+
+                            <div>  
+                                <textarea id="productDescription" name="productDescription" placeholder="Nhập mô tả sản phẩm" style="height:100px;"></textarea>
+                            </div>
+                            
+                            
+                            
+                            
+
+
+                            <div class="luuhuy">
+
+                                <div class="huy" onclick="showProductList()">
+                                    <i class="fa-solid fa-xmark"></i><span> Hủy</span>
+                                </div>
+
+                                <div class="luu" onclick="saveProducts()">
+                                    <i class="fa-solid fa-floppy-disk"></i><span> Lưu</span>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!-- Hộp xác nhận xóa sản phẩm -->
+
+                    <div id="deleteConfirmBox">
+                        <p>Bạn có chắc muốn xóa sản phẩm này?</p>
+                        <button onclick="confirmDelete()" style="background-color: #f44336; color: white;">Có</button>
+                        <button onclick="closeDeleteConfirm()" style="background-color: #4CAF50; color: white;">Không</button>
+                    </div>
+                
+                    <!-- Hộp chỉnh sửa sản phẩm -->
+                    <div id="editProductBox">
+
+                        <h3>Sửa thông tin sản phẩm</h3>
+
+                        <div>
+                            <label for="editProductCase">Mẫu ốp lưng</label>
+                            <select id="editProductCase" name="editProductCase">
+                                <option value="" disabled selected>-Chọn loại ốp lưng-</option>
+                                <option value="Anime">Anime</option>
+                                <option value="Sport">Sport</option>
+                                <option value="Art">Art</option>
+                                <option value="Game">Game</option>
+                                <option value="Cartoon">Cartoon</option>
+                            </select>                           
+                        </div>
+
+                        <div>
+                            <label for="editProductBrand">Thương hiệu</label>
+                            <select id="editProductBrand" name="editProductBrand">
+                                <option value="Apple">Apple</option>
+                                <option value="Samsung">Samsung</option>
+                              
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="editProductModel">Mẫu điện thoại</label>
+                            <input type="text" id="editProductModel" name="editProductModel">
+                        </div>
+                        
+                        <div>
+                            <label for="editProductName">Tên ốp lưng</label>
+                            <input type="text" id="editProductName" name="editProductName">
+                        </div>
+
+                        <div>
+                            <label for="editProductPrice">Giá bán</label>
+                            <input type="text" id="editProductPrice" name="editProductPrice">
+                        </div>
+
+                        <div>
+                            <label for="editProductQuantity">Số lượng</label>
+                            <input type="text" id="editProductQuantity" name="editProductQuantity">
+                        </div>
+
+                        <div>
+                            <label for="editProductImage" style="margin-bottom: 5px;">Ảnh sản phẩm</label>
+                            <input style="margin-bottom: 5px;" type="file" id="editProductImage" name="editProductImage" accept="image/*" onchange="previewEditImage()">
+                            
+                            <div id="editImagePreviewContainer">
+                                <img id="editImagePreview" src="" alt="Current Product Image" style="width: 100px; height: auto; display: none;">
+                                <button type="button" onclick="deleteEditImage()" id="deleteEditImageButton" style="display: none;position: relative; right: -50px;">Xóa ảnh</button>
+                            
+                            </div>
+
+                        </div>
+                              
+                        <div>
+                            <label for="editProductDescription">Mô tả sản phẩm</label>
+                            <textarea id="editProductDescription" name="editProductDescription"></textarea>
+                        </div>
+
+                        <div style="display: flex;">                       
+                            <button onclick="saveEditedProduct()">Lưu</button>
+                            <button onclick="closeEditProduct()">Hủy</button>
+                        </div>
+
+                    </div>
+                </div>
+
+   
+
+
+
+
+
+
+
+
+                <div class="content-section" id="customers">
+
+
+                    <div class="br_qlnd">
+                        <div class="title-qlnd"><b>Quản lí người dùng</b></div>
+                        <div class="content-qlnd">
+                            <div style="background-color: #fff;padding: 10px;">
+
+                                <hr>
+
+                            
+                            
+                            </div>
+                            <table id="userTable">
+
+                                <thead>
+                                    <tr>
+                                        <th>ID người dùng</th>
+                                        <th>Email</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Chi tiêu</th>
+                                        <th>Tính năng</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="bodyusers"><!-- Nội dung sẽ được loadUsers() thêm vào đây -->
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                
+                        <!-- Hộp thoại xác nhận khóa/mở khóa người dùng -->
+                        <div id="confirmLockModal" class="modal-qlnd">
+                            <div class="modal-content-qlnd">
+                                <p>Bạn có chắc muốn khóa/mở khóa người dùng này không?</p>
+                                <div class="button-group-qlnd">
+                                    <button onclick="confirmToggleStatus()">Có</button>
+                                    <button onclick="closeConfirmModal()">Không</button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Hộp thoại chỉnh sửa người dùng -->
+                        <div id="editUserModal" class="modal-qlnd">
+                            <div class="modal-content-qlnd">
+                                <span class="close-qlnd" onclick="closeEditUserModal()">&times;</span>
+                                <h2>Chỉnh sửa người dùng</h2>
+                                <form id="editUserForm">
+
+
+                                    <!-- Email -->
+                                    <div>
+                                        <label>Email:</label>
+                                        <input type="email" id="editEmail" required><br>
+                                    </div>   
+                                    
+                                    <!-- Số điện thoại -->
+                                    <div>
+                                        <label>Họ và tên:</label>
+                                        <input type="email" id="editName" required><br>
+                                    </div>   
+                                    <div>
+                                        <label>Số điện thoại:</label>
+                                        <input type="text" id="editPhone"><br>
+                                    </div> 
+                                    
+                                    <!-- Địa chỉ -->
+                                    <h3 style="margin-bottom: 10px;">Địa chỉ:</h3>
+                                    <div>
+                                        <label>Tỉnh/Thành phố:</label>
+                                        <select id="editCity" style="margin-bottom: 10px;">
+                                            <option value="">Chọn tỉnh/thành phố</option>
+                                            <option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option>
+                                            <!-- Thêm các thành phố khác nếu cần -->
+                                        </select><br>
+                                    </div>
+                                    <div>
+                                        <label>Quận/Huyện:</label>
+                                        <select id="editDistrict" style="margin-bottom: 10px;">
+                                            <option value="">Chọn quận/huyện</option>
+                                            <option value="Quận 1">Quận 1</option>
+                                            <option value="Quận 3">Quận 3</option>
+                                            <option value="Quận 5">Quận 5</option>
+                                            <option value="Quận 7">Quận 7</option>
+                                            <!-- Thêm các quận/huyện khác nếu cần -->
+                                        </select><br>
+                                    </div>
+                                    <div>
+                                        <label>Phường/Xã:</label>
+                                        <select id="editWard" style="margin-bottom: 10px;">
+                                            <option value="">Chọn phường/xã</option>
+                                            <option value="Phường 1">Phường 1</option>
+                                            <option value="Phường 2">Phường 2</option>
+                                            <option value="Phường 3">Phường 3</option>
+                                            <option value="Phường 4">Phường 4</option>
+                                            <option value="Phường 5">Phường 5</option>
+                                            <!-- Thêm các phường/xã khác nếu cần -->
+                                        </select><br>
+                                    </div>
+
+
+
+
+                                    <div>
+                                        <label>Số nhà, Đường:</label>
+                                        <input type="text" id="editStreet"><br>
+                                    </div>
+
+
+                                    
+                                    <div class="button-group-qlnd">
+                                        <input type="hidden" id="editUserId">
+                                        <button type="button" onclick="saveUserChanges()">Lưu thay đổi</button>
+                                        <button type="button" onclick="closeEditUserModal()">Hủy</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="content-section" id="cart">
+
+                    <div class="container_giohang">
+                        <div class="header_giohang">
+                            <div class="left_headergiohang">
+                                    <b> Danh sách sản phẩm</b>
+                            </div>
+                           
+                
+                
+                        </div>
+                        <div class="border_giohang">
+                            <div class="content_giohang">
+                                <div class="header_contentgiohang">
+                                    <div class="menu_headergiohang active_giohang" onclick="navigateTo_giohang('tatcadonhang')"><b>Tất cả đơn hàng</b></div>
+                                    <div class="menu_headergiohang " onclick="navigateTo_giohang('chuaxuly')"><b>Chưa xử lý</b></div>
+                                    <div class="menu_headergiohang " onclick="navigateTo_giohang('daxacnhan')"><b>Đã xác nhận</b></div>
+                                    <div class="menu_headergiohang " onclick="navigateTo_giohang('dagiao')"><b>Đã giao hàng</b></div>
+                                    <div class="menu_headergiohang " onclick="navigateTo_giohang('dahuy')"><b>Đã hủy</b></div>
+                
+                                </div>
+                                <div class="content_contentgiohang">
+                
+                
+                
+                
+                
+                                    <div class="content_contentgiohang_section" id="tatcadonhang" >
+                                        
+                                        <div class="search_contentgiohang">
+                
+                
+                                            <div class="left_search_contentgiohang">
+                                                <i class="fa-solid fa-filter"></i> Thêm điều kiện lọc
+                                            </div>
+                                            
+                                            <!-- Dropdown filter -->
+                                            <div class="filter-dropdown" id="filter-dropdown">
+                                                <div class="filter-condition">
+                
+                
+                                                    <label for="start-date">Ngày bắt đầu:</label>
+                                                    <input type="date" id="start-date">
+                                            
+                
+                
+                                                    <label for="end-date">Ngày kết thúc:</label>
+                                                    <input type="date" id="end-date">
+                                            
+                                                    
+                                                    <label for="district">Quận:</label>
+                                                        <select id="district">
+                                                            <option value="">Tất cả</option>
+                                                            <option value="Quận 1">Quận 1</option>
+                                                            <option value="Quận 2">Quận 2</option>
+                                                            <option value="Quận 3">Quận 3</option>
+                                                            <option value="Quận 4">Quận 4</option>
+                                                            <option value="Quận 5">Quận 5</option>
+                                                            <option value="Quận 6">Quận 6</option>
+                                                            <option value="Quận 7">Quận 7</option>
+                                                           
+                                                            <!-- Thêm các quận khác tại đây -->
+                                                        </select>
+                
+                
+                
+                                                    <label for="order-status">Tình trạng đơn hàng:</label>
+                                                    <select id="order-status">
+                                                        <option value="">Tất cả</option>
+                                                        <option value="Chưa xử lý">Chưa xử lý</option>
+                                                        <option value="Chưa giao hàng" >Chưa giao hàng</option>
+                                                        <option value="Đã giao hàng">Đã giao hàng</option>
+                                                        <option value="Đã hủy">Đã hủy</option>
+                                                    </select>
+                                            
+                
+                                                    
+                                            
+                
+                                                    <button id="clear-filters-button" onclick="resetFilters()" style="margin-left: 0px;">Xóa điều kiện lọc</button>
+                
+                                                </div>
+                                            </div>
+                                            
+                                            
+                
+                
+                                            
+                                            <div class="right_right_search_contentgiohang">
+                                               <i id="search-button" class="fa-solid fa-magnifying-glass"></i>
+                                            </div>
+                                        </div>
+                
+                                        
+                
+                                       <div class="listdonhang">
+                
+                    <div class="table-listdonhang">
+                        <table id="orders">
+                            <thead>
+                                <tr>
+                                    <th>Mã</th>
+                                    <th>Ngày</th>
+                                    <th>Tên</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Phương thức </th>
+                                    <th>Tổng tiên</th>
+                                    <th>Tình trạng</th>
+                                    <th>Thao tác </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                
+                                
+                            </tbody>
+                        </table>
+                
+                
+                
+                
+                       
+                                
+                
+                
+                
+                
+                    </div>
+                </div>
+                
+                                    </div>
+                
+                
+                
+                                   
+                                    <div class="content_contentgiohang_section" id="chuaxuly" >
+                                        <table id="donhangchuaxuly">
+                                            <thead>
+                                                <tr>
+                                                    <th>Mã</th>
+                                                    <th>Ngày</th>
+                                                    <th>Tên</th>
+                                                    <th>Địa chỉ</th>
+                                                    <th>Phương thức</th>
+                                                    <th>Tổng tiền</th>
+                                                    <th>Tình trạng</th>
+                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                
+                
+                
+                
+                
+                                    <div class="content_contentgiohang_section" id="daxacnhan" >
+                
+                
+                                        <table id="donhangdaxacnhan">
+                                            <thead>
+                                                <tr>
+                                                    <th>Mã</th>
+                                                    <th>Ngày</th>
+                                                    <th>Tên</th>
+                                                    <th>Địa chỉ</th>
+                                                    <th>Phương thức</th>
+                                                    <th>Tổng tiền</th>
+                                                    <th>Tình trạng</th>
+                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                
+                
+                
+                
+                
+                
+                                    <div class="content_contentgiohang_section" id="dagiao" >
+                
+                                        <table id="donhangdagiao">
+                                            <thead>
+                                                <tr>
+                                                    <th>Mã</th>
+                                                    <th>Ngày</th>
+                                                    <th>Tên</th>
+                                                    <th>Địa chỉ</th>
+                                                    <th>Phương thức</th>
+                                                    <th>Tổng tiền</th>
+                                                    <th>Tình trạng</th>
+                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                
+                
+                
+                                    
+                
+                
+                
+                                    <div class="content_contentgiohang_section" id="dahuy" >
+                
+                
+                                       <table id="donhangdahuy">
+                                            <thead>
+                                                <tr>
+                                                    <th>Mã</th>
+                                                    <th>Ngày</th>
+                                                    <th>Tên</th>
+                                                    <th>Địa chỉ</th>
+                                                    <th>Phương thức</th>
+                                                    <th>Tổng tiền</th>
+                                                    <th>Tình trạng</th>
+                                                
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                
+                                            </tbody>
+                                       </table>
+                
+                                    </div>
+                
+                                    
+                
+                                </div>
+                
+                            </div>
+                
+                        </div>
+
+
+                    <!-- Cuối phần body -->
+                <div id="modal"></div>
+                
+                    </div>
+
+
+                    
+                  
+                </div>
+
+
+
+
+
+                                    
+
+
+
+
+
+
+                                     
+
+
+
+
+
+                <div class="content-section" id="statistics">
+                    
+                    <div class="container_thongke">
+
+
+
+                        <div class="left_thongke">
+                            <div class="left-panel"> 
+
+
+                                <a href="javascript:void(0);" onclick="navigateTo('customers')">
+                                    <div class="box_thongke">
+                                        <div class="box-icon_thongke">
+                                            <p><i class="fas fa-users"></i></p> <!-- Biểu tượng cho khách hàng -->
+                                        </div>
+                                        <div class="box-info_thongke">
+                                           <p>Tổng Khách Hàng: <span id="total-customers"></span></p> 
+                                        </div>
+                                    </div>
+                                    </a>
+    
+    
+    
+    
+                                    <a href="javascript:void(0);" onclick="navigateTo('cart')">
+                                    <div class="box_thongke">
+                                        
+                                        <div class="box-icon_thongke">
+                                            <p><i class="fas fa-shopping-cart"></i> </p><!-- Biểu tượng cho lượt mua -->
+                                        </div>
+                                        <div class="box-info_thongke">
+                                           <p>Tổng Doanh Thu: <span id="total-purchases"></span></p> 
+                                        </div>
+                                    </div></a>
+    
+    
+    
+                                    <a href="javascript:void(0);" onclick="navigateTo('contentsanpham')">
+                                    <div class="box_thongke">
+                                        <div class="box-icon_thongke">
+                                            <p><i class="fas fa-box"></i> </p><!-- Biểu tượng cho sản phẩm -->
+                                        </div>
+                                        <div class="box-info_thongke">
+                                           <p> Tổng Sản Phẩm: <span id="total-products"></span></p>
+                                        </div>
+                                    </div></a>
+    
+    
+    
+    
+    
+                                    <a href="javascript:void(0);" onclick="navigateTo('contentsanpham')">
+                                    <div class="box_thongke">
+                                        <div class="box-icon_thongke">
+                                           <p> <i class="fas fa-exclamation-triangle"></i> </p><!-- Biểu tượng cho sản phẩm sắp hết hàng -->
+                                        </div>
+                                        <div class="box-info_thongke">
+                                          <p> Sắp Hết Hàng: <span id="products-near-out"></span></p>
+                                        </div>
+                    
+                                    </div>
+                    
+                                </div></a>
+
+
+
+                       
+
+                        <div class="bottom_panel">
+                            
+
+                            <div class="title_khachhang">
+                              <b> TOP KHÁCH HÀNG</b>
+                            </div>
+
+                            <div class="right_trong1">
+                                <div class="left_search_contentgiohang" id="unique-filter-toggle-customer" style="width: 40%; cursor: pointer;">
+                                    <i class="fa-solid fa-filter"></i> Thêm điều kiện lọc 
+                                </div>
+                            
+                                <div class="unique-filter-time" id="unique-filter-time-customer" style="display: none;">
+                                    <label for="unique-filter-start-date-customer">Từ ngày:</label>
+                                    <input type="date" id="unique-filter-start-date-customer">
+                                    <label for="unique-filter-end-date-customer">Đến ngày:</label>
+                                    <input type="date" id="unique-filter-end-date-customer">
+                            
+                                    <div style="display: flex;">
+                                        <button id="unique-filter-apply-btn-customer">Lọc</button>
+                                        <button id="unique-filter-clear-btn-customer">Xóa điều kiện</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <table id="topkhachhang">                
+                                <thead>
+                                    <tr>
+                                        <th>TOP</th>
+                                        <th>ID</th>
+                                        <th>TÊN KHÁCH HÀNG</th>
+                                        <th>SĐT</th>
+                                        <th > TỔNG CHI TIÊU </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+
+
+                        </div>   
+
+
+
+
+
+
+
+
+                        <div class="middle_panel"> 
+                
+                            <div class="title_khachhang"><b>KHÁCH HÀNG MỚI</b></div>
+                    
+                                <table id="khachhangmoi">
+                                    <thead>
+                                        <th>STT</th>
+                                        <th>TÊN KHÁCH HÀNG</th>
+                                        <th>SĐT</th>
+                                        <th>EMAIL</th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+
+                                    
+                                </table>
+
+
+                            </div>
+
+
+                    
+                        
+                        </div>                
+
+
+
+
+                        <div class="right_thongke">
+
+                            <div class="right-panel">
+                            <canvas id="incomeChart"></canvas>
+                            </div>
+
+                            <div class="right-panel" style="flex-direction: column;">
+
+
+                                <div class="right_trong1">
+                                    <div class="left_search_contentgiohang" id="unique-filter-toggle-product" style="width: 40%; cursor: pointer;">
+                                        <i class="fa-solid fa-filter"></i> Thêm điều kiện lọc
+                                    </div>
+
+                                    <div class="unique-filter-time" id="unique-filter-time-product" style="display: none;">
+                                        <label for="unique-filter-start-date-product">Từ ngày:</label>
+                                        <input type="date" id="unique-filter-start-date-product">
+                                        <label for="unique-filter-end-date-product">Đến ngày:</label>
+                                        <input type="date" id="unique-filter-end-date-product">
+
+                                        <div style="display: flex;">
+                                            <button id="unique-filter-apply-btn-product">Lọc</button>
+                                            <button id="unique-filter-clear-btn-product">Xóa điều kiện</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="right_trong2">
+                                    <table id="thongkesanphambanra">
+                                        <thead>
+                                            <tr>
+                                                <th>TOP</th>
+                                                <th>MÃ SẢN PHẨM</th>
+                                                <th>TÊN SẢN PHẨM</th>
+                                                <th>TỔNG LƯỢT BÁN</th>
+                                                <th>TỔNG TIỀN</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <div class="right-panel" style="height: 15%; flex-direction: column;">
+                                <div class="right_trong1" style="padding-top: 10px;height: 50%;">
+                                    <h4>SẢN PHẨM CHẠY NHẤT: <span id="best-selling-product"></span></h4>
+                                </div>
+                                
+                                <div class="right_trong2" style="padding-top: 10px; height: 50%;">
+                                    <h4>SẢN PHẨM Ế NHẤT: <span id="worst-selling-product"></span></h4>
+                                </div>
+
+                                
+
+                            </div>
+
+                            
+
+                                
+
+
+
+
+
+                            </div>
+                            <div id="modalThongke" class="modal" style="display: none;"></div>
+                            <div id="modalThongkesanpham" class="modal" style="display: none;"></div>
+
+
+
+                            
+
+
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+                  
+           
+        
+    </div>
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast" style="display: none;"></div>
+
+    <script src="admin.js"></script> 
+    <script src="trangsanpham.js"></script>
+    <script src="quanlinguoidung.js"></script>
+    <script src="tranggiohang.js"></script>
+    <script src="trangthongke.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="product_detail.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+:root {
+    --gray: rgba(128, 128, 128, 0.8); /* Định nghĩa màu xám */
+    --white: rgba(255, 255, 255, 0.8); /* Định nghĩa màu trắng */}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea; /* Nền trang sáng hơn */
+
+}
+
+.trangtongquancon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+   
+}
+.header_icon_tongquan{
+    font-size: 35px;
+    position: relative;
+    left: -5px;
+}
+.header_tongquan {
+    width: 100%;
+    height: 60px; /* Tăng chiều cao để trông ấn tượng hơn */
+    font-size: 25px; /* Tăng kích thước font chữ */
+    font-weight: bold; /* Đậm chữ hơn */
+    color: black;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: center;
+    border-radius: 8px; /* Làm mềm các góc */
+    padding: 10px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3); /* Bóng bên trong */
+    transition: all 0.3s ease;
+}
+
+
+.content_tongquan{
+    margin-top: 15px;
+    border-radius: 8px;
+    width: 100%;
+    min-width: 600px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.box_tongquan{
+    width: 49%;
+    min-width: 380px;
+    display: flex; 
+    padding: 20px;
+    height: 49%;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+        5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+    
+}
+ .box_itemtongquan {
+    width: 100%;
+    min-width: 340px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: flex;
+}
+
+.box_itemtongquan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+}
+.box_itemtongquan .boxleft{
+    width: 35%;
+    margin-top: 50px;
+    height: 100%;
+}
+.box_itemtongquan .boxright{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    right: -20px;
+}
+.box_itemtongquan .boxright h2{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    font-size: 25px;
+    color:black;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.box_itemtongquan .boxright h3{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    font-size: 18px;
+    color: black;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.box_itemtongquan .boxright p{
+        position: absolute;
+        top: 100px;
+        font-size: 0.9em;
+        font-weight: 400;
+        color:black;
+        z-index: 1;
+        transition: 0.3s;
+        text-align: left;
+    
+}
+.box_itemtongquan:hover h2,
+.box_itemtongquan:hover h3,
+.box_itemtongquan:hover p{
+    color: #ffffff;
+}
+    
+@media screen and (max-width: 1080px) {
+    .box_itemtongquan{
+        min-width: 340px;
+    }
+    .header_tongquan{
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width: 880px) {
+    .box_tongquan{
+        width: 100%;
+        min-width: 200px;
+    }
+    .box_itemtongquan{
+        min-width: 180px;
+    }
+    .content_tongquan{
+        min-width: 300px;
+    }
+    .header_tongquan{
+        font-size: 15px;
+    }
+
+}
+
+

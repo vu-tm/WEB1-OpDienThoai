@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+:before,
+:after {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+
+
+/*===========CODE CỦA EMINEM======================*/
+
+/* -------------------------- *\
+    TRANG CHI TIẾT SẢN PHẨM
+\* -------------------------- */
+
+.KhuChiTiet {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+
+.product_container_chitietsanpham {
+    max-width: 1000px;
+    position: relative;
+    top: 300px;
+    left: 500px;
+    width: 100%;
+    transform: translate(-50%, -50%);       
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-y: overlay;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-left: 100px;
+    padding: 20px;
+    
+}
+
+.product_preview {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 5px;
+    gap: 10px;
+}
+
+
+
+.product_preview .feature_images {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product_preview .feature_images img {
+    max-width: 64px;
+    min-width: 55px;
+    width: auto;
+    max-height: 64px;
+    object-fit: contain;
+}
+
+.product_preview .main_image {
+    width: 100%;
+    max-height: 350px;
+}
+
+.product_preview .main_image img {
+    object-fit: contain;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 250px;
+    min-height: 250px;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.product_details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5px;
+}
+
+.title_group .Info h1 {
+    padding: 10px 0 5px 0;
+}
+
+.title_group .Price {
+    color: #0435a2;
+    width: 100%;
+    padding: 5px 0 10px 0;
+}
+
+.model_selector_chitietsanpham {
+    padding: 5px 0;
+}
+
+.product_attributes_chitietsanpham .label_name_chitietsanpham {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+#model_name {
+    font-weight: bold;
+}
+
+.model_buttons_chitietsanpham {
+    display: flex;
+    gap: 10px;
+    width: 200px;
+}
+
+.model_option_chitietsanpham {
+    width: 100%;
+    min-width: 89px;
+    height: 45px;
+    border: solid 2px #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: border-color 0.2s;
+}
+
+.model_option:hover {
+    border: solid 2px violet;
+    background-color: #ececec;
+}
+
+.model_option.selected {
+    color: #ddd;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(7, 0, 47);
+}
+
+
+.add_to_cart_button button {
+    width: 99%;
+    border-radius: 20px;
+    background-color: #0435a2;
+    color: white;
+    font-size: 15px;
+    margin: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.feature_images img {
+    cursor: pointer;
+}
+
+.selected {
+    border-bottom: 2px solid rgb(77, 76, 76);
+}
+
+
+.product_features {
+    position: relative;
+    top: 200px;
+    left: -220px;
+    height: 50%;
+    padding: 15px;
+}
+
+.product_features h3 {
+    margin: 5px 0;
+}
+
+.product_features ul {
+    list-style-type: circle;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.product_features li {
+    padding: 5px 0;
+}
+
+

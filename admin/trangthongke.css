@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Nền trang sáng hơn */
+
+}
+
+.container_thongke {
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    
+
+}
+
+
+
+.left_thongke{
+    width: 99%;
+    height: 103%;
+    margin:  none;
+    display: table-column;
+}
+.right_thongke{
+    height: auto;
+    display: flex;
+    width: 99%;
+    min-width: 90%;
+    flex-direction: column;
+    position: relative;
+    right: 0px;
+    gap: 10px;
+}
+
+.left-panel {
+    
+    width: 100%;
+    padding: 20px;
+    height: 250px;
+    background-color: #ffffff;
+    display: grid;
+    margin-bottom: 8px;
+    grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
+    gap: 10px; /* Khoảng cách giữa các ô */
+    border-radius: 10px; /* Bo tròn viền */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho left-panel */
+
+}
+
+
+.box_thongke {
+    display: flex; /* Sử dụng flexbox để chia hai phần */
+    padding: 15px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    transition: transform 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng chuyển động */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho ô */
+}
+
+.box-icon_thongke {
+    height: 100%;
+    border-radius: 10px; /* Bo tròn viền */
+    width: 30%; /* 30% cho icon */
+    display: flex;
+    border: solid 1px black;
+    justify-content: center; /* Canh giữa icon */
+    align-items: center; /* Canh giữa icon theo chiều dọc */
+}
+
+.box-info_thongke {
+    width: 70%; /* 70% cho thông tin */
+    padding-left: 10px;
+    
+}
+
+
+.box_thongke:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Tăng bóng đổ khi hover */
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+}
+.box_thongke:hover p{
+    color: #ffffff;
+}
+.box_thongke:hover .box-icon_thongke {
+    border: solid 1px #ffffff;
+}
+
+
+
+
+.middle_panel{
+    overflow: auto;
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+    border-radius: 10px; /* Bo tròn viền */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho left-panel */
+    
+    
+}
+.title_khachhang {
+    width: 100%;
+    background-color: #ccc; /* Màu nền xanh */
+    color: black; /* Màu chữ trắng */
+    font-size: 20px;
+    position: sticky; /* Giữ cố định khi cuộn */
+    top: 0; /* Vị trí ở đỉnh */
+    z-index: 1; /* Đảm bảo nó nằm trên các phần tử khác */
+    padding: 10px; /* Khoảng cách bên trong */
+    border-radius: 10px 0 0 0; /* Bo tròn viền phía trên */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Bỏ gạch nối giữa các ô */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea; /* Dòng kẻ dưới mỗi ô */
+    border-right: 1px solid #eaeaea; /* Dòng kẻ dọc giữa các ô */
+}
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.small-column {
+    width: 20%; /* Cột đầu tiên nhỏ hơn */
+}
+
+.medium-column {
+    width: 40%; /* Hai cột còn lại có độ rộng bằng nhau */
+}
+
+
+th {
+    background-color: #aaa7a7; /* Màu nền cho tiêu đề bảng */
+}
+
+tr:hover {
+    background-color: #f9f9f9; /* Màu nền khi di chuột qua hàng */
+}
+
+/* Xóa dòng kẻ dọc ở ô cuối cùng */
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+
+.bottom_panel{
+    overflow: auto;
+    width: 100%;
+    height: 330px;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+    border-radius: 10px; /* Bo tròn viền */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho left-panel */
+}
+
+
+
+
+.right-panel {
+    height: 350px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px; /* Bo tròn viền */
+    overflow: auto;
+    background-color: white;
+    display: flex;
+    margin-left: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho right-panel */
+
+}
+.right_trong1{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+
+}
+.right_trong2{
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
+@media screen and (max-width: 1300px){
+.right_thongke{
+    width: 39%;
+    margin-top: -15px; 
+}
+};
+@media screen and (max-width: 1300px){
+.right_thongke{
+    width: 300px;
+    
+
+}
+};
+
+
+@media screen and (max-width: 768px) {  
+    .container_thongke{
+        overflow: none;
+        display: flex ;
+        flex-direction: column ;
+       
+    }
+   
+    .left_thongke{
+        width: 100% ;
+        margin: 0;
+    }
+    .right_thongke{
+        width: 100%;
+        margin: 0;
+    }
+    
+
+}
+/* Các kiểu chung */
+.right_trong1 {
+    position: relative;
+}
+
+/* Bộ lọc */
+.unique-filter-time {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.unique-filter-time label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.unique-filter-time input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.unique-filter-time button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#unique-filter-apply-btn-customer,
+#unique-filter-apply-btn-product {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#unique-filter-clear-btn-customer,
+#unique-filter-clear-btn-product {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+
+

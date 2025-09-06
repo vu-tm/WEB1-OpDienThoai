@@ -1,0 +1,8 @@
+:root{
+    --price-color: rgb(4, 53, 162);
+    --text-black: rgb(25, 25, 25);
+}
+*{
+    box-sizing: inherit;
+    -ms-text-size-adjust: none;
+}

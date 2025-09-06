@@ -1,0 +1,136 @@
+.br_qlnd{
+height: 100vh;    
+  
+
+}
+.title-qlnd{
+    height: 60px ;
+    padding-top: 10px;
+    border-left: solid #555454 7px;
+    font-size: 28px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  
+}
+b{
+    margin-left: 20px;
+}
+.content-qlnd{
+    margin-top: 15px;
+    background-color: #ffff;
+    width: 100%;
+    border-radius: 7px;
+    padding: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* Giữ border-collapse để bảng trông gọn gàng */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #eaeaea; /* Thêm đường viền cho tất cả các cạnh của từng ô */
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+.icon-qlnd{
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, rgba(73, 72, 72, 0.8), rgba(17, 0, 0, 0.974)); 
+    padding: 3px;
+    color: white;
+
+}
+
+
+.tinhnang-qlnd{
+    display: flex;
+    gap: 5px;
+}
+/* Định dạng hộp thoại */
+/* Nền mờ khi hiện hộp thoại */
+.modal-qlnd {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Nội dung hộp thoại */
+.modal-content-qlnd {
+    background-color: #fff;
+    padding: 30px 20px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+}
+
+/* Nút đóng hộp thoại */
+.close-qlnd {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Căn chỉnh nhãn và ô nhập */
+#editUserForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#editUserForm input,select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Nút lưu và hủy */
+.button-group-qlnd {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút */
+    gap: 30px; /* Khoảng cách giữa các nút */
+    margin-top: 10px;
+}
+
+.button-group-qlnd button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.button-group button:first-child {
+    background-color: #4CAF50; /* Màu xanh lá cây cho nút Lưu */
+}
+
+.button-group button:last-child {
+    background-color: #f44336; /* Màu đỏ cho nút Hủy */
+}
+
+

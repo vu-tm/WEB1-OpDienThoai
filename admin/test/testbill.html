@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bill.css">
+    <link rel="stylesheet" href="trangthongke.css">
+    <link rel="stylesheet" href="tranggiohang.css">
+</head>
+<body>
+
+    <div class="bottom_panel">
+        <div class="title_khachhang"><b>TOP KHÁCH HÀNG</b></div>
+        
+        <table class="custom-table">                
+            <thead>
+                <tr>
+                    <th class="small-column">Top</th>
+                    <th class="medium-column">Tên</th>
+                    <th class="medium-column">Số điện thoại</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="javascript:void(0);" onclick="showProductDetails('top1')">Nguyễn Văn A</a></td>
+                    <td>0377000000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Trần Thị B</td>
+                    <td>0987654321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Phạm Văn C</td>
+                    <td>0912345678</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Chi tiết sản phẩm (Di chuyển ra ngoài bảng) -->
+    <div id="product-details-top1" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeProductDetails('top1')">&times;</span>
+            <div class="container-bill">
+                <div class="header-bill">
+                    <b>Hóa đơn tổng quan của khách hàng Nguyễn Văn A</b>
+                </div>
+                <div class="box-bill">
+                    <div class="box-bill-con">
+                        <div class="box-icon_bill">
+                            <img src="img/quality_restoration_20241115223458915.png" alt="" style="width: 70%;">
+                        </div>
+                        <div class="box-info_bill"> <h3>Tổng đơn đã mua : 35</h3></div>
+                    </div>
+                    <div class="box-bill-con">
+                        <div class="box-icon_bill">
+                            <img src="img/quality_restoration_20241115223439909.png" alt="" style="width: 65%;">
+                        </div>
+                        <div class="box-info_bill"> <h3>Tổng đơn đã hủy : 2</h3></div>
+                    </div>
+                    <div class="box-bill-con">
+                        <div class="box-icon_bill">
+                            <img src="img/quality_restoration_20241115223419656.png" alt="" style="width: 70%;">
+                        </div>
+                        <div class="box-info_bill"><h3>Tổng chi tiêu : 3.455.000</h3></div>
+                    </div>
+                </div>
+
+                <div class="content-bill">
+                    <table class="nested-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày mua</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>#DH001</td>
+                                <td>01/11/2024</td>
+                                <td>100,000₫</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>#DH002</td>
+                                <td>05/11/2024</td>
+                                <td>200,000₫</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tranggiohang.js"></script>
+</body>
+</html>

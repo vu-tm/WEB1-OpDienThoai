@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Quản Lý Đơn Hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản Lý Đơn Hàng</h1>
+
+        <!-- Bộ lọc -->
+        <div class="filter">
+            <label for="start-date">Từ ngày:</label>
+            <input type="date" id="start-date">
+
+            <label for="end-date">Đến ngày:</label>
+            <input type="date" id="end-date">
+
+            <label for="district">Quận:</label>
+            <select id="district">
+                <option value="">Tất cả</option>
+                <option value="Quận 1">Quận 1</option>
+                <option value="Quận 2">Quận 2</option>
+                <option value="Quận 3">Quận 3</option>
+                <option value="Quận 4">Quận 4</option>
+                <!-- Thêm các quận khác tại đây -->
+            </select>
+
+            <label for="order-status">Tình trạng đơn hàng:</label>
+            <select id="order-status">
+                <option value="">Tất cả</option>
+                <option value="Chưa xử lý">Chưa xử lý</option>
+                <option value="Chưa giao hàng">Chưa giao hàng</option>
+                <option value="Đã giao hàng">Đã giao hàng</option>
+                <option value="Đã hủy">Đã hủy</option>
+            </select>
+
+            <button onclick="resetFilters()">Xóa bộ lọc</button>
+        </div>
+
+        <!-- Bảng đơn hàng -->
+        <table id="orders">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Nội dung đơn hàng sẽ được thêm tại đây -->
+            </tbody>
+        </table>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
