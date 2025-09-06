@@ -2,7 +2,7 @@
 
 **ADMIN: ** 
 Tài khoản: admin@gmail.com
- / Mật khẩu: admin123
+/ Mật khẩu: admin123
 
 ⌯⌲ Admin và Trang bán hàng nằm ở 2 file riêng biệt
 
