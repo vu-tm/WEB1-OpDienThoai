@@ -14,11 +14,11 @@
   <img width="1915" height="1004" alt="Image" src="https://github.com/user-attachments/assets/02c4a826-aa4e-4164-a84b-b67731245ba9" />
 </p>
 
-<br>
+<p align="center">
   <b> Đăng nhập để sử dụng </b>
 <br>
-  <img width="544" height="540" alt="Image" src="https://github.com/user-attachments/assets/253fe6ec-2af2-4578-9caf-7ffb3b618272" />
-<br>
+  img width="544" height="540" alt="Image" src="https://github.com/user-attachments/assets/253fe6ec-2af2-4578-9caf-7ffb3b618272" />
+</p>
 
 <p align="center">
   <b> Bộ lọc </b>
