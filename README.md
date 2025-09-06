@@ -31,7 +31,9 @@
 
 <p align="center">
   <b> Sản phẩm </b>
-  <img width="1037" height="599" alt="Image" src="https://github.com/user-attachments/assets/9294f69a-dd1d-4d10-af73-7390335f801e" />
+  <br>
+  <img width="837" alt="Image" src="https://github.com/user-attachments/assets/9294f69a-dd1d-4d10-af73-7390335f801e" />
+  <br>
   <br>
   <img width="640" height="501" alt="Image" src="https://github.com/user-attachments/assets/565ca99f-7cf0-494b-8437-fbc4b0019c1d"" />
 </p>
@@ -52,6 +54,7 @@
 <p align="center">
   <b> Trang admin </b>
   <img width="1470" height="603" alt="Image" src="https://github.com/user-attachments/assets/467d79bb-ef32-4bc6-b15f-de8dc5df9e46"/>
+  <br>
   <br>
   <img width="1490" height="603" alt="Image" src="https://github.com/user-attachments/assets/8c12a0fd-cb3f-4866-80c6-605af0921289"/>
 </p>
