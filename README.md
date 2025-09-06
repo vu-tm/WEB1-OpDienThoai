@@ -1,6 +1,7 @@
 # WEB1-OpDienThoai
 
-**ADMIN: ** 
+**ADMIN**
+
 Tài khoản: admin@gmail.com
 / Mật khẩu: admin123
 
