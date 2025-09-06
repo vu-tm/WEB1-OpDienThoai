@@ -17,7 +17,7 @@
 <p align="center">
   <b> Đăng nhập để sử dụng </b>
 <br>
-  img width="544" height="540" alt="Image" src="https://github.com/user-attachments/assets/253fe6ec-2af2-4578-9caf-7ffb3b618272" />
+  <img width="544" height="540" alt="Image" src="https://github.com/user-attachments/assets/253fe6ec-2af2-4578-9caf-7ffb3b618272" />
 </p>
 
 <p align="center">
