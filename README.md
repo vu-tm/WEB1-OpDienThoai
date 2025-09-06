@@ -2,7 +2,7 @@
 
 <h3><b>Tài khoản Admin</b></h3>
 
-- **Email:** admin@gmail.com 
+- **Email:** `admin@gmail.com`
 - **Password:** admin123
 <br>
 ⌯⌲ Admin và Trang bán hàng nằm ở 2 file riêng biệt
