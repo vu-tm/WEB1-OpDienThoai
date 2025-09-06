@@ -31,9 +31,9 @@
 
 <p align="center">
   <b> Sản phẩm </b>
-  <img width="837" height="399" alt="Image" src="https://github.com/user-attachments/assets/9294f69a-dd1d-4d10-af73-7390335f801e" />
+  <img width="1037" height="599" alt="Image" src="https://github.com/user-attachments/assets/9294f69a-dd1d-4d10-af73-7390335f801e" />
   <br>
-  <img width="740" height="601" alt="Image" src="https://github.com/user-attachments/assets/565ca99f-7cf0-494b-8437-fbc4b0019c1d"" />
+  <img width="640" height="501" alt="Image" src="https://github.com/user-attachments/assets/565ca99f-7cf0-494b-8437-fbc4b0019c1d"" />
 </p>
 <br>
 
