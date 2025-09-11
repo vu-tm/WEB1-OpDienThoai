@@ -6,6 +6,7 @@
 - **Password:** `admin123`
 <br>
 ⌯⌲ Admin và Trang bán hàng nằm ở 2 file riêng biệt
+⌯⌲ Dữ liệu lưu trong LocalStorage
 <br>
 
 <h3><br>Giao diện: </br></h3>
